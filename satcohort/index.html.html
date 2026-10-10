@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SAT Cohort 1.0 — Ascent English School</title>
+<meta name="description" content="SAT Cohort 1.0 by Ascent English School: live SAT Reading & Writing lessons, recorded videos, homework, DSAT mock tests and monthly exams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf7f0;--bg2:#f2ece0;--ink:#121829;--mut:#5d6579;--card:#ffffff;--line:#e6dfcf;--gold:#a8812f;--gold2:#d9b768;--navy:#0d1530;--navy2:#172350;--ok:#1f8a5b;--bad:#c2410c;--shadow:0 24px 50px -28px rgba(13,21,48,.4);--r:18px;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#090e1d;--bg2:#0e1528;--ink:#f3efe4;--mut:#9aa3bb;--card:#121a31;--line:#25304f;--gold:#d8b36a;--gold2:#e9cb88;--shadow:0 24px 50px -28px rgba(0,0,0,.8)}}
+:root[data-theme="dark"]{--bg:#090e1d;--bg2:#0e1528;--ink:#f3efe4;--mut:#9aa3bb;--card:#121a31;--line:#25304f;--gold:#d8b36a;--gold2:#e9cb88;--shadow:0 24px 50px -28px rgba(0,0,0,.8)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:-.01em;line-height:1.15;margin:0}
+a{color:inherit;text-decoration:none;cursor:pointer}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.sec{padding:84px 0}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.h2{font-size:clamp(28px,4vw,42px);margin:10px 0 14px}
+.lead{color:var(--mut);max-width:640px;font-size:17px}
+.mut{color:var(--mut)}.small{font-size:13px}.ctr{text-align:center}.ctr .lead{margin:0 auto}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navin{display:flex;align-items:center;gap:18px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:19px}
+.brand b{color:var(--gold)}
+.logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:var(--gold2);display:grid;place-items:center;font-size:18px;box-shadow:inset 0 0 0 1px rgba(217,183,104,.5)}
+.links{display:flex;gap:4px;margin-left:auto}
+.links a{padding:8px 12px;border-radius:10px;font-size:14px;font-weight:500;color:var(--mut)}
+.links a:hover{color:var(--ink);background:var(--bg2)}
+.navr{display:flex;gap:8px;align-items:center}
+.burger{display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:12px;padding:11px 18px;font-weight:600;font-size:15px;transition:.2s;white-space:nowrap}
+.btn.gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1405;box-shadow:0 10px 24px -12px var(--gold)}
+.btn.gold:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.dark{background:var(--navy);color:#f5efe0}
+.btn.line{border-color:var(--line);background:var(--card);color:var(--ink)}
+.btn.line:hover{border-color:var(--gold)}
+.btn.ghost{color:var(--mut);background:transparent}
+.btn.sm{padding:7px 12px;font-size:13px;border-radius:10px}
+.btn.full{width:100%}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.hero{background:radial-gradient(900px 500px at 85% -10%,rgba(217,183,104,.28),transparent 60%),radial-gradient(700px 500px at -10% 110%,rgba(80,110,220,.25),transparent 60%),linear-gradient(160deg,#0b1230,#142058 70%,#0b1230);color:#f5efe0;padding:88px 0 96px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(circle at 70% 30%,#000,transparent 70%);pointer-events:none}
+.hgrid{display:grid;grid-template-columns:1.25fr .85fr;gap:48px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(38px,6vw,68px)}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero p.sub{font-size:18px;color:#c9cfe6;max-width:540px;margin:20px 0 28px}
+.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(217,183,104,.45);color:var(--gold2);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;background:rgba(217,183,104,.08);margin-bottom:22px}
+.stats{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap}
+.stats div b{display:block;font:700 30px Fraunces,Georgia,serif;color:var(--gold2)}
+.stats div span{font-size:13px;color:#aab3d2}
+.glass{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:26px;backdrop-filter:blur(12px);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.glass .price{font:700 44px Fraunces,Georgia,serif;color:#fff}
+.glass .old{text-decoration:line-through;color:#8f99bd;margin-left:8px;font-size:18px}
+.glass ul{list-style:none;padding:0;margin:16px 0 20px;display:grid;gap:9px;font-size:14px;color:#d6dbef}
+.glass li:before{content:"✦";color:var(--gold2);margin-right:10px}
+.next{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:#aab3d2;border-top:1px solid rgba(255,255,255,.14);padding-top:14px;margin-top:6px}
+.next b{color:#fff}
+.grid{display:grid;gap:20px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow)}
+.card.flat{box-shadow:none}
+.ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--navy),var(--navy2));color:var(--gold2);font-size:22px;margin-bottom:16px}
+.card h3{font-size:21px;margin-bottom:8px}
+.card p{margin:0;color:var(--mut);font-size:15px}
+.band{background:var(--bg2);border-block:1px solid var(--line)}
+details.acc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0;margin-bottom:12px;overflow:hidden}
+details.acc summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;align-items:center;gap:14px;font-weight:600}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary:after{content:"+";margin-left:auto;font-size:22px;color:var(--gold)}
+details.acc[open] summary:after{content:"–"}
+details.acc .in{padding:0 22px 20px;color:var(--mut);font-size:15px}
+.num{width:34px;height:34px;border-radius:10px;background:var(--bg2);display:grid;place-items:center;font:700 15px Fraunces,serif;color:var(--gold);flex:none}
+.lrow{display:flex;gap:10px;align-items:center;padding:9px 0;border-top:1px dashed var(--line)}
+.lrow:first-child{border-top:0}
+.plan{position:relative;display:flex;flex-direction:column}
+.plan.hot{border:1.5px solid var(--gold);background:linear-gradient(180deg,color-mix(in srgb,var(--gold2) 14%,var(--card)),var(--card))}
+.badge{position:absolute;top:-13px;left:24px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1405;font-size:12px;font-weight:700;border-radius:999px;padding:4px 12px}
+.plan .pr{font:700 36px Fraunces,Georgia,serif;margin:12px 0 2px}
+.plan .pr s{font:500 15px Inter,sans-serif;color:var(--mut);margin-left:8px}
+.plan ul{list-style:none;padding:0;margin:16px 0 22px;display:grid;gap:10px;font-size:14.5px;flex:1}
+.plan li:before{content:"✓";color:var(--ok);font-weight:700;margin-right:10px}
+.tcard{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start}
+.photo{width:170px;height:170px;border-radius:28px;object-fit:cover;box-shadow:0 0 0 2px var(--gold2),var(--shadow)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.tag{font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;background:var(--bg2);border:1px solid var(--line);color:var(--mut);display:inline-block}
+.tag.gold{background:color-mix(in srgb,var(--gold2) 22%,transparent);color:var(--gold);border-color:color-mix(in srgb,var(--gold) 40%,transparent)}
+.tag.ok{background:color-mix(in srgb,var(--ok) 14%,transparent);color:var(--ok);border-color:transparent}
+.tag.bad{background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad);border-color:transparent}
+.ticks{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:9px;font-size:14.5px}
+.ticks li:before{content:"✦";color:var(--gold);margin-right:10px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{padding:12px 10px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.scroll{overflow-x:auto}
+label{display:block;font-size:13px;font-weight:600;margin:0 0 6px;color:var(--mut)}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold2) 30%,transparent)}
+.fg{margin-bottom:14px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.auth{max-width:480px;margin:56px auto;padding:0 20px}
+.err{color:var(--bad);font-size:13px;margin:-4px 0 12px}
+.opt{display:block;width:100%;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:9px;color:var(--ink)}
+.opt:hover{border-color:var(--gold)}
+.opt.sel{border-color:var(--gold);background:color-mix(in srgb,var(--gold2) 18%,var(--bg))}
+.opt.right{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 14%,var(--bg))}
+.opt.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 12%,var(--bg))}
+.passage{background:var(--bg2);border-left:3px solid var(--gold);padding:14px 16px;border-radius:0 12px 12px 0;font-family:Fraunces,Georgia,serif;font-size:16px;margin:0 0 14px;white-space:pre-line}
+.expl{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--bg2);font-size:14px;color:var(--mut)}
+footer{background:var(--navy);color:#aab3d2;padding:48px 0 34px}
+footer .brand{color:#f5efe0}
+.fgrid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.fab .fb{width:56px;height:56px;border-radius:50%;border:0;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1405;font-size:24px;box-shadow:0 14px 30px -10px rgba(0,0,0,.5)}
+.fab .menu{display:none;flex-direction:column;gap:8px}
+.fab.open .menu{display:flex}
+.fab .menu a{background:var(--card);border:1px solid var(--line);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;box-shadow:var(--shadow)}
+/* dashboard */
+.dhead{padding:34px 0 8px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:6px 0 14px;scrollbar-width:none;margin-bottom:6px;border-bottom:1px solid var(--line)}
+.tabs::-webkit-scrollbar{display:none}
+.tab{border:1px solid transparent;background:transparent;color:var(--mut);padding:9px 15px;border-radius:12px;font-weight:600;font-size:14px;white-space:nowrap}
+.tab.on{background:var(--navy);color:#f5efe0}
+.tab:not(.on):hover{background:var(--bg2)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:20px 0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.kpi b{display:block;font:700 28px Fraunces,Georgia,serif}
+.kpi span{font-size:13px;color:var(--mut)}
+.bar{height:8px;background:var(--bg2);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:99px;transition:width .5s}
+.lock{opacity:.6}
+.item{display:flex;gap:14px;align-items:center;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+.item .grow{flex:1;min-width:0}.item h4{margin:0;font-size:15.5px}
+.item .s{font-size:13px;color:var(--mut)}
+.chk{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;flex:none;font-size:14px;color:transparent;background:transparent;padding:0}
+.chk.on{background:var(--ok);border-color:var(--ok);color:#fff}
+.two{display:grid;grid-template-columns:1.4fr 1fr;gap:20px}
+.lcard{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden}
+.lhead{width:100%;display:flex;gap:14px;align-items:center;text-align:left;background:transparent;border:0;color:var(--ink);padding:16px 18px}
+.lhead .grow{flex:1;min-width:0}
+.lhead h4{margin:0;font-size:16px}
+.lbody{padding:2px 18px 18px;display:grid;gap:10px}
+.cat{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:14px 16px}
+.cat .ci{font-size:22px;line-height:1.2}
+.cat .cb{flex:1;min-width:0}
+.cat b{display:block;font-size:14.5px}
+.cat .s{font-size:13px;color:var(--mut);margin-top:2px}
+.cat .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.flash{perspective:900px;height:230px;cursor:pointer}
+.flash .fi{position:relative;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flash.flip .fi{transform:rotateY(180deg)}
+.flash .face{position:absolute;inset:0;backface-visibility:hidden;border-radius:20px;display:grid;place-items:center;text-align:center;padding:24px;border:1px solid var(--line)}
+.flash .front{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#f5efe0}
+.flash .front .serif{font-size:38px;color:var(--gold2)}
+.flash .back{background:var(--card);transform:rotateY(180deg);font-size:19px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tile{min-height:78px;border-radius:14px;border:1px solid var(--line);background:var(--card);padding:8px;font-size:13.5px;font-weight:600;display:grid;place-items:center;text-align:center;color:var(--ink)}
+.tile.sel{border-color:var(--gold);background:color-mix(in srgb,var(--gold2) 20%,var(--card))}
+.tile.done{background:color-mix(in srgb,var(--ok) 16%,var(--card));border-color:var(--ok);opacity:.7}
+.tile.no{border-color:var(--bad)}
+.jp{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.jp .hd{background:linear-gradient(160deg,var(--navy),var(--navy2));color:var(--gold2);border-radius:12px;padding:12px 6px;text-align:center;font-weight:700;font-size:13px}
+.jp .cell{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:16px 4px;font:700 20px Fraunces,serif;color:var(--gold)}
+.jp .cell:hover{border-color:var(--gold)}
+.jp .cell.used{opacity:.25;pointer-events:none}
+.ov{position:fixed;inset:0;background:rgba(5,8,20,.62);backdrop-filter:blur(4px);z-index:80;display:grid;place-items:center;padding:18px;overflow-y:auto}
+.modal{background:var(--card);border:1px solid var(--line);border-radius:22px;max-width:620px;width:100%;padding:28px;box-shadow:0 40px 80px -20px rgba(0,0,0,.6);max-height:92vh;overflow-y:auto;position:relative}
+.modal.wide{max-width:780px}
+.x{position:absolute;right:14px;top:14px;border:0;background:var(--bg2);width:34px;height:34px;border-radius:50%;color:var(--ink)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);background:var(--navy);color:#f5efe0;padding:12px 20px;border-radius:12px;opacity:0;pointer-events:none;transition:.3s;z-index:99;font-size:14px;max-width:90vw;border:1px solid rgba(217,183,104,.5)}
+.toast.show{opacity:1;transform:translateX(-50%)}
+.video{aspect-ratio:16/9;background:linear-gradient(160deg,var(--navy),var(--navy2));border-radius:16px;display:grid;place-items:center;color:#c9cfe6;text-align:center;padding:20px;width:100%}
+video.video{padding:0;background:#000}
+.timer{font:700 20px Fraunces,serif;color:var(--gold);font-variant-numeric:tabular-nums}
+.ring{--p:0;width:118px;height:118px;border-radius:50%;background:conic-gradient(var(--gold) calc(var(--p)*1%),var(--bg2) 0);display:grid;place-items:center}
+.ring span{width:92px;height:92px;border-radius:50%;background:var(--card);display:grid;place-items:center;font:700 24px Fraunces,serif}
+.qnav{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}
+.qn{width:34px;height:34px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:13px;font-weight:600}
+.qn.cur{border-color:var(--gold);box-shadow:0 0 0 2px color-mix(in srgb,var(--gold2) 40%,transparent)}
+.qn.ans{background:var(--navy);color:#f5efe0;border-color:var(--navy)}
+/* alerts */
+.alert{display:flex;gap:14px;align-items:center;border-radius:16px;padding:16px 20px;margin:18px 0 0;flex-wrap:wrap}
+.alert .ai{font-size:26px}.alert .at{flex:1;min-width:200px}
+.alert b{display:block;font-size:17px}.alert span{font-size:13.5px}
+.alert.warn{background:#fff3cd;color:#664d03;border:1.5px solid #f0b429}
+.alert.urgent{background:#fee2e2;color:#7f1d1d;border:2px solid #dc2626;animation:pulse 1.4s infinite}
+.alert.over{background:#b91c1c;color:#fff;border:2px solid #7f1d1d;animation:pulse 1s infinite}
+.alert.sat{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#f5efe0;border:1px solid rgba(217,183,104,.6)}
+.alert.sat b{color:var(--gold2);font-family:Fraunces,serif;font-size:20px}
+.alert.sat span{color:#d6dbef;font-size:14.5px;line-height:1.55}
+.alert.red{background:#fee2e2;color:#7f1d1d;border:2px solid #dc2626}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(220,38,38,.55)}50%{box-shadow:0 0 0 9px rgba(220,38,38,0)}}
+@media (prefers-reduced-motion:reduce){.alert{animation:none!important}html{scroll-behavior:auto}}
+.redmode{--gold:#c81e1e;--gold2:#ef4444;--line:#f3b4b4}
+.redmode .tab.on{background:#7f1d1d}
+.redmode .dhead h2{color:#b91c1c}
+.redmode .btn.gold{color:#fff}
+.redmode .card,.redmode .kpi{border-color:#f3b4b4}
+.pie{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.legend{display:grid;gap:8px;font-size:14px;flex:1;min-width:150px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:8px}
+@media(max-width:900px){
+ .hgrid,.two{grid-template-columns:1fr}.g3,.g4{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:1fr 1fr}
+ .links{display:none;position:absolute;left:0;right:0;top:68px;background:var(--bg);flex-direction:column;padding:12px 20px 18px;border-bottom:1px solid var(--line);margin:0}
+ .links.open{display:flex}.burger{display:inline-flex}.sec{padding:60px 0}.hero{padding:56px 0 64px}
+}
+@media(max-width:600px){.g3,.g4,.g2,.row2{grid-template-columns:1fr}.tcard{grid-template-columns:1fr}.photo{width:140px;height:140px}.tiles{grid-template-columns:repeat(3,1fr)}.hide-s{display:none}.navr .btn.sm{padding:7px 10px}.modal{padding:22px 18px}.jp .cell{font-size:16px;padding:14px 2px}.jp .hd{font-size:11px}}
+</style>
+</head>
+<body>
+<div id="nav"></div>
+<main id="app"></main>
+<div id="foot"></div>
+<div id="fab" class="fab"><div class="menu"><a href="https://t.me/rustamovabduaziz" target="_blank" rel="noopener">✈ Telegram</a><a href="https://wa.me/998889209888" target="_blank" rel="noopener">💬 WhatsApp</a></div><button class="fb" data-act="fab" aria-label="Contact us">💬</button></div>
+<div id="modal"></div>
+<div id="toast" class="toast"></div>
+
+<script>
+/* =====================================================================
+   SETTINGS — edit these values (or send them to Claude to update)
+   ===================================================================== */
+const CONFIG={
+ school:'Ascent English School',
+ tg:'rustamovabduaziz', phone:'998889209888',
+ start:'2026-10-13',            // date of the FIRST live lesson (must be Tue/Thu/Sat)
+ adminEmail:'admin@satcohort.uz',
+ adminHash:'h15kvx0t72xs',     // hash of the admin password (never the password itself)
+ salt:'ASC-2026-xK9',           // secret used to create/check promo codes
+ warnDays:7, urgentDays:3, graceDays:3,   // payment warning levels (days before the paid-through date)
+ examWindowDays:3, examMins:20,           // monthly exam opens during the last N days of the month
+ targets:{'2026-10':500,'2026-11':560,'2026-12':620,'2027-01':680,'2027-02':720}, // minimum exam score per month
+ coinsToRestore:100, coinsPerSolve:10
+};
+const PHOTO='data:image/jpeg;base64,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';
+
+/* ---------- helpers ---------- */
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>Number(n||0).toLocaleString('en-US').replace(/,/g,' ')+' UZS';
+const uid=()=>Math.random().toString(36).slice(2,9);
+const ld=d=>{const x=new Date(d);return x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0')};
+const today=()=>ld(new Date());
+const ym=()=>today().slice(0,7);
+const cyrb53=(str,seed=0)=>{let h1=0xdeadbeef^seed,h2=0x41c6ce57^seed;for(let i=0,ch;i<str.length;i++){ch=str.charCodeAt(i);h1=Math.imul(h1^ch,2654435761);h2=Math.imul(h2^ch,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return 4294967296*(2097151&h2)+(h1>>>0)};
+const hash=p=>'h'+cyrb53(String(p)+CONFIG.salt).toString(36);
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const fdate=d=>new Date(d.length===10?d+'T00:00:00':d).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+const fmonth=m=>new Date(m+'-01T00:00:00').toLocaleDateString('en-GB',{month:'long',year:'numeric'});
+const tgLink=t=>'https://t.me/'+CONFIG.tg+'?text='+encodeURIComponent(t);
+const rnd=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
+const lastDay=m=>{const [y,mo]=m.split('-').map(Number);return ld(new Date(y,mo,0))};
+const months=()=>{const out=[],[y,m]=CONFIG.start.slice(0,7).split('-').map(Number);for(let i=0;i<30;i++){const d=new Date(y,m-1+i,1);out.push(d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0'))}return out};
+function left(ms){if(ms<=0)return '0m';const m=Math.floor(ms/60000),d=Math.floor(m/1440),h=Math.floor(m%1440/60);return d?d+'d '+h+'h':h?h+'h '+(m%60)+'m':m+'m'}
+
+/* ---------- content ---------- */
+const D=['Information & Ideas','Craft & Structure','Expression of Ideas','Standard English Conventions'];
+const DESC={'Foundations':'How the test works and how to study for it.','Information & Ideas':'Central ideas, evidence, inferences and reading data.','Craft & Structure':'Words in context, text structure, purpose and cross-text links.','Expression of Ideas':'Transitions, concision and rhetorical synthesis.','Standard English Conventions':'Boundaries, agreement, verb forms and punctuation.'};
+const TYPES=[
+ ['central','Central ideas & details',D[0]],['evidence','Command of evidence',D[0]],['inference','Inferences',D[0]],
+ ['wic','Words in context',D[1]],['structure','Text structure & purpose',D[1]],['cross','Cross-text connections',D[1]],
+ ['transitions','Transitions',D[2]],['synthesis','Rhetorical synthesis',D[2]],['concision','Concision & style',D[2]],
+ ['boundaries','Boundaries & punctuation',D[3]],['fss','Form, structure & sense',D[3]]];
+/* Materials for each question type — paste links here when ready: {central:{notes:'https://…',sheet:'https://…'}} */
+const TYPE_MATERIALS={};
+/* Full DSAT mock tests — add link: 'https://…' when the PDF / test is ready */
+const MOCKS=[1,2,3,4].map(n=>({id:'m'+n,name:'Full DSAT Mock '+n,desc:'Reading & Writing · 2 modules · 54 questions · 64 min',link:''}));
+const BANK=[
+{d:D[0],t:'evidence',p:"Marine biologist Dr. Lena Okafor tracked tagged sea turtles for six years. She found that the turtles returned to the beach where they hatched to nest, even after traveling thousands of kilometers. Okafor concluded that the turtles must use some form of internal navigation.",q:"Which finding, if true, would most directly support Okafor's conclusion?",o:["Turtles tend to nest on beaches with similar sand.","Turtles whose magnetic sensing was disrupted often failed to find their birth beach.","Turtles feed in the same waters every year.","Hatchlings emerge during the warmest months."],a:1,e:"Only B links a disrupted internal sense to failed navigation, which directly tests the claim of internal navigation."},
+{d:D[0],t:'central',p:"When Copenhagen began adding protected bike lanes in the 1980s, most planners expected modest use. Within two decades, however, cycling accounted for over a third of commuter trips, a rate far above any forecast. Planners now cite the city as evidence that infrastructure can reshape behavior.",q:"Which choice best states the main idea of the text?",o:["Copenhagen's bike infrastructure produced far more cycling than predicted, suggesting infrastructure can change behavior.","Planners in the 1980s opposed bike lanes.","Cycling is always faster than driving in cities.","Copenhagen has more bike lanes than any other European city."],a:0,e:"A covers both the surprising growth and the broader lesson. The others are unsupported or too narrow."},
+{d:D[0],t:'inference',p:"Although the novel received lukewarm reviews when it was published, its sales have grown steadily every year for three decades, and it is now taught in many university courses.",q:"Which choice most logically completes the text? \"This suggests that the novel's reputation ______\"",o:["has improved over time.","was always poor.","depends entirely on its sales.","is unrelated to critics."],a:0,e:"Poor early reviews followed by decades of growth and academic adoption points to an improving reputation."},
+{d:D[0],t:'evidence',p:"A table shows monthly visits to a library branch: January, 1,200; February, 1,150; March, 1,400; April, 1,650. A student claims that visits rose every month.",q:"Which data point from the table most directly undermines the student's claim?",o:["The April total of 1,650 visits.","The decline from 1,200 visits in January to 1,150 in February.","The March total of 1,400 visits.","The increase from March to April."],a:1,e:"The claim says every month increased. February is lower than January, so it contradicts the claim."},
+{d:D[1],t:'wic',p:"The senator's argument was so ______ that even her opponents admitted they could not find a flaw in its logic.",q:"Which choice completes the text with the most logical and precise word?",o:["cogent","vague","ornate","hasty"],a:0,e:"Cogent means clear, logical and convincing, which fits an argument with no logical flaw."},
+{d:D[1],t:'wic',p:"Researchers were initially skeptical of the theory, but repeated experiments yielded results that were ______ its predictions.",q:"Which choice completes the text with the most logical and precise word or phrase?",o:["inconsistent with","unrelated to","consistent with","indifferent to"],a:2,e:"The contrast word \"but\" signals that skepticism faded, so results must agree with the predictions."},
+{d:D[1],t:'structure',p:"Poet Elena Marsh opens her collection with a poem about her grandmother's kitchen. By grounding the book in a single, intimate place, Marsh invites readers to see the larger themes of migration and memory through a personal lens.",q:"Which choice best describes the function of the sentence beginning \"By grounding\"?",o:["It explains how the opening poem shapes the way readers approach the collection's themes.","It criticizes Marsh's choice of subject.","It supplies biographical details about Marsh's family.","It contrasts the collection with earlier poetry."],a:0,e:"The sentence explains the effect of the opening poem's focus on the reader's view of the book's themes."},
+{d:D[1],t:'cross',p:"Text 1: Remote work boosts productivity because employees avoid long commutes and constant office interruptions.\nText 2: Some studies do show productivity gains from remote work, but they often overlook how collaboration suffers when teams are dispersed.",q:"Based on the texts, how would the author of Text 2 most likely respond to Text 1?",o:["By agreeing and adding no qualifications.","By partly agreeing while arguing it ignores an important cost.","By rejecting every study on remote work.","By arguing that commuting improves productivity."],a:1,e:"Text 2 concedes some gains (\"do show\") but adds a missing consideration, which is partial agreement with a caveat."},
+{d:D[2],t:'transitions',p:"Solar panels have become far cheaper over the past decade. ______ adoption among households has risen sharply.",q:"Which choice completes the text with the most logical transition?",o:["However,","Consequently,","Nevertheless,","Instead,"],a:1,e:"Lower prices lead to higher adoption: a cause-and-effect relationship, so \"Consequently\"."},
+{d:D[2],t:'transitions',p:"The museum's new exhibit drew huge crowds on opening weekend. ______ attendance dropped sharply over the following weeks.",q:"Which choice completes the text with the most logical transition?",o:["Similarly,","For example,","However,","Therefore,"],a:2,e:"Big crowds then a sharp drop is a contrast, so \"However\"."},
+{d:D[2],t:'synthesis',p:"Notes:\n• The Arctic tern migrates from the Arctic to the Antarctic each year.\n• The round trip is roughly 70,000 km.\n• This means the bird experiences two summers per year.",q:"The student wants to emphasize the length of the journey. Which choice most effectively does this?",o:["The Arctic tern experiences two summers each year.","Each year the Arctic tern flies from the Arctic to the Antarctic and back, a round trip of roughly 70,000 km.","The Arctic tern is a bird that lives in cold regions.","The Arctic tern is a migratory bird."],a:1,e:"B is the only choice that foregrounds the distance using the specific figure from the notes."},
+{d:D[2],t:'concision',p:"The committee ______ the proposal.",q:"Which choice is the most concise while preserving the meaning of the sentence?",o:["made a decision to approve","approved","came to the decision to approve","reached a decision of approval for"],a:1,e:"\"Approved\" says the same thing in one word; the others are wordy."},
+{d:D[3],t:'boundaries',p:"The museum, which opened in 1998 ______ houses over ten thousand artifacts.",q:"Which choice completes the text so that it conforms to the conventions of Standard English?",o:[",",";",":","(no punctuation)"],a:0,e:"The clause \"which opened in 1998\" is nonessential and must be closed with a comma to match the opening comma."},
+{d:D[3],t:'fss',p:"The collection of rare manuscripts ______ displayed on the third floor.",q:"Which choice completes the text so that it conforms to the conventions of Standard English?",o:["are","is","were","have been"],a:1,e:"The subject is the singular \"collection\", not \"manuscripts\", so the verb is singular: \"is\"."},
+{d:D[3],t:'boundaries',p:"The experiment failed twice ______ the team refused to give up.",q:"Which choice completes the text so that it conforms to the conventions of Standard English?",o:[",",";",":","and,"],a:1,e:"Two independent clauses can be joined with a semicolon. A comma alone creates a comma splice."},
+{d:D[3],t:'fss',p:"By the time the rescue team arrived, the hikers ______ for nearly two days.",q:"Which choice completes the text so that it conforms to the conventions of Standard English?",o:["waited","had been waiting","have waited","are waiting"],a:1,e:"An action continuing up to a past moment (\"by the time...arrived\") needs the past perfect progressive."}
+];
+const VOCAB=[["ambivalent","having mixed feelings"],["candid","honest and direct"],["cogent","clear, logical and convincing"],["conventional","following accepted norms"],["corroborate","to support with evidence"],["diligent","careful and hard-working"],["eloquent","fluent and persuasive in speech"],["empirical","based on observation or experiment"],["ephemeral","lasting a very short time"],["equivocal","open to more than one interpretation"],
+["exacerbate","to make worse"],["frugal","careful with money"],["gregarious","sociable and outgoing"],["hinder","to make difficult"],["impartial","fair; not biased"],["innovative","introducing new ideas"],["juxtapose","to place side by side for contrast"],["lucid","easy to understand"],["meticulous","very careful about details"],["mitigate","to make less severe"],
+["nuanced","marked by subtle distinctions"],["obsolete","no longer used"],["pragmatic","practical rather than idealistic"],["prolific","producing much"],["reticent","reserved; unwilling to speak"],["scrutinize","to examine closely"],["skeptical","doubtful"],["substantiate","to provide evidence for"],["tenacious","persistent"],["ubiquitous","found everywhere"],
+["unprecedented","never done before"],["venerate","to respect deeply"],["volatile","liable to change quickly"],["zealous","passionate and eager"],["paradox","a statement that seems contradictory yet may be true"],["plausible","seemingly reasonable"],["refute","to prove wrong"],["benevolent","kind and generous"],["austere","plain and severe"],["inherent","existing as a natural part"]];
+const NLISTS=4;
+const listWords=i=>VOCAB.slice(i*10,i*10+10);
+const FAQ=[["Who is SAT Cohort 1.0 for?","Students preparing for the Reading & Writing (EBRW) section of the digital SAT, from first-time test takers to students aiming to push past a plateau."],["How do the recorded lessons work?","Every live lesson is recorded and organized as a lesson page with its video, PDF notes, materials and homework, so you can catch up and revise at any time."],["What happens with homework and deadlines?","Every lesson has homework with a clear deadline at 19:59 on the day of the next lesson (Tue / Thu / Sat). Your dashboard shows a live countdown."],["What is the monthly exam?","At the end of every month you sit an exam under real exam conditions covering what was taught. Each month has a minimum score — reach it to keep your account green."],["How do I pay?","Payment is completed one-on-one with the director on Telegram. After payment you receive a personal promo code which unlocks your account."],["Can I try before I enrol?","Yes. Register for free to access the orientation lesson, the diagnostic test, vocabulary lists, quizzes and games."]];
+const PLANS=[
+ {id:'cohort',name:'Cohort 1.0',tag:'Most popular',price:450000,old:550000,features:['Live lessons Tue / Thu / Sat, 19:15–20:30','Free offline class every Sunday','Recorded lessons, PDF notes, materials and homework','Full DSAT mock tests and type-based practice','Monthly exam, tracker and score analytics','Vocabulary lists, quizzes and Jeopardy']},
+ {id:'self',name:'Self-Study',tag:'',price:300000,old:0,features:['All recorded lessons and PDF notes','Type-based practice and DSAT mocks','Vocabulary quizzes and games','Progress tracker']},
+ {id:'plus',name:'Mentor Plus',tag:'',price:750000,old:0,features:['Everything in Cohort 1.0','Personal study plan','Mistake-by-mistake feedback','Monthly 1-to-1 review call','Priority Telegram support']}
+];
+const planOf=id=>PLANS.find(p=>p.id===id);
+const LESSONS=[
+ ['Orientation: how the digital SAT Reading & Writing works','Foundations',1],
+ ['Central ideas and details',D[0]],['Command of evidence: textual',D[0]],['Command of evidence: quantitative',D[0]],['Inferences',D[0]],
+ ['Words in context',D[1]],['Text structure and purpose',D[1]],['Cross-text connections',D[1]],
+ ['Transitions',D[2]],['Rhetorical synthesis',D[2]],
+ ['Boundaries and punctuation',D[3]],['Form, structure and sense',D[3]]
+].map((l,i)=>({id:'L'+(i+1),n:i+1,title:l[0],domain:l[1],free:!!l[2],
+ video:'',          // recorded lesson link (mp4/webm plays inside the site; any other link opens in a new tab)
+ notes:'',          // PDF lesson notes link
+ materials:[],      // [{t:'Title',url:'https://…'}]
+ hw:{text:'',url:''} // homework description + optional PDF link
+}));
+/* lesson calendar: every Tue / Thu / Sat from the start date */
+const SLOTS=(()=>{const out=[],d=new Date(CONFIG.start+'T00:00:00');while(out.length<80){if([2,4,6].includes(d.getDay()))out.push(new Date(d));d.setDate(d.getDate()+1)}return out})();
+const liveAt=i=>{const d=new Date(SLOTS[i]);d.setHours(19,15,0,0);return d};
+const hwDue=i=>{const d=new Date(SLOTS[i+1]);d.setHours(19,59,0,0);return d};
+function nextClass(){const now=new Date();for(let i=0;i<SLOTS.length;i++){if(liveAt(i)>now)return liveAt(i)}return null}
+const fmtNext=d=>d?d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'})+' · 19:15':'—';
+const fmtDT=d=>d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'})+', '+d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+const CATS=['Reading','Grammar & Writing','Mock tests','Vocabulary'];
+const CCOL=['#d9b768','#4f7cff','#e0568a','#2fb68b'];
+const LOGIC=[
+ {q:"A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",o:["$0.10","$0.05","$0.01","$0.15"],a:1},
+ {q:"It takes 5 machines 5 minutes to make 5 widgets. How long would it take 100 machines to make 100 widgets?",o:["100 minutes","20 minutes","5 minutes","1 minute"],a:2},
+ {q:"What comes next in the sequence: 2, 6, 12, 20, 30, ...?",o:["40","42","44","36"],a:1},
+ {q:"Which number does NOT belong: 16, 25, 36, 48, 49?",o:["16","25","48","49"],a:2},
+ {q:"A farmer has 17 sheep. All but 9 run away. How many sheep are left?",o:["8","9","17","0"],a:1},
+ {q:"What comes next: 1, 1, 2, 3, 5, 8, ...?",o:["11","12","13","14"],a:2},
+ {q:"Sara is taller than Tom. Tom is taller than Uma. Vera is shorter than Uma. Who is the second tallest?",o:["Sara","Tom","Uma","Vera"],a:1},
+ {q:"If all bloops are razzies and all razzies are lazzies, which statement must be true?",o:["All lazzies are bloops","All bloops are lazzies","Some lazzies are not razzies","No razzies are bloops"],a:1}
+];
+function genMath(){
+ const t=rnd(0,4);let q,a;
+ if(t===0){const x=rnd(2,15),m=rnd(2,9),b=rnd(1,20);q=`If ${m}x + ${b} = ${m*x+b}, what is the value of x?`;a=x}
+ else if(t===1){const p=[10,15,20,25,30,40,50][rnd(0,6)],n=rnd(2,12)*20;q=`What is ${p}% of ${n}?`;a=p*n/100}
+ else if(t===2){const y1=rnd(1,9),k=rnd(2,6),x2=rnd(2,6);q=`A line passes through (0, ${y1}) and (${x2}, ${y1+k*x2}). What is its slope?`;a=k}
+ else if(t===3){const a1=rnd(2,6),b1=rnd(2,6),T=rnd(3,9);q=`The ratio of boys to girls in a club is ${a1}:${b1}. If there are ${b1*T} girls, how many boys are there?`;a=a1*T}
+ else{const x=rnd(3,12);q=`What is the value of ${x}² − ${x}?`;a=x*x-x}
+ const ds=new Set([a]);while(ds.size<4)ds.add(a+rnd(-6,6));
+ const o=shuffle([...ds]);return{q,o:o.map(String),a:o.indexOf(a),id:null};
+}
+
+/* ---------- storage ---------- */
+let mem=null,DB;
+const seed=()=>({users:[],session:null,codes:[]});
+function load(){try{const r=localStorage.getItem('sc2');if(r)return JSON.parse(r)}catch(e){}return mem||seed()}
+function save(){mem=DB;try{localStorage.setItem('sc2',JSON.stringify(DB))}catch(e){}}
+DB=load();save();
+const newProg=()=>({lessons:{},hw:{},known:{},log:[],tests:[],scores:[],quiz:[],match:null,jp:0,exams:{},cleared:{},coins:0,solved:{},mocks:{}});
+const ADMIN={id:'admin',name:'Administrator',role:'admin'};
+function cur(){if(DB.session==='admin')return ADMIN;const u=DB.users.find(u=>u.id===DB.session)||null;if(u)u.prog=Object.assign(newProg(),u.prog||{});return u}
+const isAdmin=u=>u&&u.role==='admin';
+function payState(u){
+ if(!u||!u.enrolled||!u.paidThrough)return null;
+ const end=new Date(u.paidThrough+'T23:59:59'),diff=(end-Date.now())/864e5;
+ if(diff<0){const od=Math.ceil(-diff);return{lvl:'over',days:od,locked:od>CONFIG.graceDays}}
+ const dl=Math.ceil(diff);return{lvl:dl<=CONFIG.urgentDays?'urgent':dl<=CONFIG.warnDays?'warn':'ok',days:dl};
+}
+const hasAccess=u=>{if(!u)return false;if(isAdmin(u))return true;if(!u.enrolled)return false;const p=payState(u);return !(p&&p.locked)};
+function failedMonths(u){
+ if(!u||!u.enrolled)return [];const start=u.startYM||(u.created||today()).slice(0,7);
+ return Object.keys(CONFIG.targets).filter(m=>m>=start&&m<ym()&&!(u.prog.exams[m]&&u.prog.exams[m].score>=CONFIG.targets[m])&&!u.prog.cleared[m]);
+}
+
+/* ---------- promo codes ---------- */
+function makeCode(email,plan,m){const h=cyrb53(email.trim().toLowerCase()+'|'+plan+'|'+m+'|'+CONFIG.salt+'|promo').toString(36).toUpperCase().padStart(8,'0').slice(-8);return h.slice(0,4)+'-'+h.slice(4)}
+function matchCode(email,code){code=code.toUpperCase().replace(/[^A-Z0-9]/g,'');for(const p of PLANS)for(const m of months()){if(makeCode(email,p.id,m).replace('-','')===code)return{plan:p.id,ym:m}}return null}
+
+/* ---------- state ---------- */
+let S={view:'home',tab:'overview',atab:'codes',vsub:'lists',vl:'all',pend:null,sq:null,fc:null,vq:null,mg:null,jp:null,cp:null,test:null,res:null,err:'',menu:false,openL:null,pie:'month',gen:null};
+let tmr=null,mgT=null;
+function clearTimers(){clearInterval(tmr);clearInterval(mgT);tmr=null;mgT=null}
+function go(v,extra){clearTimers();S.test=null;S.view=v;S.err='';S.menu=false;Object.assign(S,extra||{});try{history.replaceState(null,'','#'+v)}catch(e){}draw();window.scrollTo(0,0)}
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),2800)}
+function modal(html,wide){$('#modal').innerHTML='<div class="ov" data-act="ovclose"><div class="modal'+(wide?' wide':'')+'" onclick="event.stopPropagation()"><button class="x" data-act="close" aria-label="Close">✕</button>'+html+'</div></div>'}
+const closeModal=()=>{$('#modal').innerHTML=''};
+function addLog(u,min,cat,note){u.prog.log.push({date:today(),min:Math.max(1,Math.round(min)),cat,note:note||''})}
+function streak(u){const s=new Set([...u.prog.log.map(l=>l.date),...u.prog.scores.map(t=>t.date)]);let n=0;const d=new Date();if(!s.has(ld(d)))d.setDate(d.getDate()-1);while(s.has(ld(d))){n++;d.setDate(d.getDate()-1)}return n}
+const lastScore=u=>u.prog.scores.length?u.prog.scores[u.prog.scores.length-1]:null;
+
+/* ---------- reusable banners ---------- */
+function payBanner(u){
+ const p=payState(u);if(!p||p.lvl==='ok')return '';
+ const cls=p.lvl,icon=p.lvl==='warn'?'⚠️':'🚨';
+ const sub=p.lvl==='over'?`Payment is ${p.days} day(s) overdue. ${p.locked?'Your access is now locked until payment is made.':'Access will be locked in '+Math.max(0,CONFIG.graceDays-p.days+1)+' day(s).'}`:`${p.days} day(s) left until your paid period ends (${fdate(u.paidThrough)}).`;
+ return `<div class="alert ${cls}" role="alert"><div class="ai">${icon}</div><div class="at"><b>Qarz munosabatni buzadi! Iltimos to'lovni amalga oshiring.</b><span>${sub}</span></div><button class="btn ${p.lvl==='over'?'line':'dark'} sm" data-act="enrol" data-p="${u.enrolled}">Pay via Telegram</button></div>`;
+}
+function satBanner(force){
+ const day=new Date().getDay();if(!force&&day!==6&&day!==0)return '';
+ const when=day===0?'today':'tomorrow';
+ return `<div class="alert sat"><div class="ai">🎓</div><div class="at"><b>Your free Sunday offline lesson is waiting for you</b><span>All week you learned the rules online. ${when[0].toUpperCase()+when.slice(1)} we turn them into real skill — face to face, completely free. Bring your questions and your toughest mistakes: we fix weak spots live, answer everything you were afraid to ask, and send you home with a clear plan for the week ahead. Showing up is half of the score. Your seat is saved — don't give it away.</span></div><a class="btn gold sm" href="${tgLink("Hello! I'll be at the Sunday offline lesson — please confirm my seat.")}" target="_blank" rel="noopener">Confirm my seat</a></div>`;
+}
+
+/* ---------- shell ---------- */
+function navHtml(){
+ const u=cur();
+ const L=[['curriculum','Curriculum'],['pricing','Courses & pricing'],['teachers','Teachers'],['try','Try a question'],['contact','Contact']].map(l=>`<a data-act="scroll" data-t="${l[0]}">${l[1]}</a>`).join('');
+ const right=u?`<a class="btn gold sm" data-act="go" data-v="${isAdmin(u)?'admin':'dash'}">${isAdmin(u)?'Admin':'My dashboard'}</a><button class="btn line sm hide-s" data-act="logout">Log out</button>`:`<button class="btn ghost sm" data-act="go" data-v="login">Log in</button><button class="btn gold sm" data-act="go" data-v="register">Enrol</button>`;
+ return `<header class="nav"><div class="wrap navin"><a class="brand" data-act="go" data-v="home"><span class="logo">S</span><span>SAT Cohort <b>1.0</b></span></a><nav class="links${S.menu?' open':''}">${L}</nav><div class="navr" style="margin-left:auto"><button class="btn line sm" data-act="theme" aria-label="Toggle theme">◐</button>${right}<button class="btn line sm burger" data-act="menu" aria-label="Menu">☰</button></div></div></header>`;
+}
+function footHtml(){return `<footer><div class="wrap"><div class="fgrid"><div><div class="brand"><span class="logo">S</span><span>SAT Cohort 1.0</span></div><p class="small" style="max-width:340px">A premium SAT Reading &amp; Writing programme by ${CONFIG.school}.</p></div><div class="small"><b style="color:#f5efe0">Contact</b><br>Telegram: <a href="https://t.me/${CONFIG.tg}" target="_blank" rel="noopener" style="color:var(--gold2)">@${CONFIG.tg}</a><br>Phone / WhatsApp: <a href="https://wa.me/${CONFIG.phone}" target="_blank" rel="noopener" style="color:var(--gold2)">+998 88 920 98 88</a></div><div class="small"><b style="color:#f5efe0">Schedule</b><br>Tue · Thu · Sat — 19:15–20:30<br>Sunday — free offline class</div></div><p class="small" style="margin-top:28px;border-top:1px solid rgba(255,255,255,.12);padding-top:18px">© ${new Date().getFullYear()} ${CONFIG.school}. SAT® is a registered trademark of College Board, which is not affiliated with this programme.</p></div></footer>`}
+
+/* ---------- home ---------- */
+function homeHtml(){
+ const main=PLANS[0],nc=nextClass();
+ const lessonsBy=d=>LESSONS.filter(l=>l.domain===d);
+ const sq=BANK[S.sq?S.sq.i:0],picked=S.sq?S.sq.pick:null;
+ return `${satBanner()?`<div class="wrap">${satBanner()}</div>`:''}
+<section class="hero"><div class="wrap hgrid"><div>
+ <div class="pill">✦ ${CONFIG.school} presents</div>
+ <h1>Master SAT <em>Reading &amp; Writing</em> — with structure, not guesswork.</h1>
+ <p class="sub">A live cohort and a complete learning space for the SAT EBRW: recorded lessons, PDF notes, homework with deadlines, full DSAT mocks, type-based practice and monthly exams.</p>
+ <div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn gold" data-act="enrol" data-p="${main.id}">Enrol · ${fmt(main.price)}</button><button class="btn" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.25)" data-act="scroll" data-t="try">Try a free question</button></div>
+ <div class="stats"><div><b>4</b><span>SAT domains covered</span></div><div><b>${LESSONS.length}</b><span>structured lessons</span></div><div><b>${MOCKS.length}</b><span>full DSAT mocks</span></div><div><b>${VOCAB.length}</b><span>vocabulary words</span></div></div>
+</div>
+<div class="glass"><div class="small" style="color:var(--gold2);font-weight:700;letter-spacing:.14em">COHORT 1.0 · NOW ENROLLING</div>
+ <div style="margin:10px 0 4px"><span class="price">${fmt(main.price)}</span>${main.old?`<span class="old">${fmt(main.old)}</span>`:''}</div>
+ <div class="small" style="color:#aab3d2">Limited-time launch price</div>
+ <ul><li>Live lessons Tue / Thu / Sat · 19:15–20:30</li><li>Free offline class every Sunday</li><li>Lessons, PDF notes, homework &amp; mocks</li><li>Monthly exam under real conditions</li></ul>
+ <button class="btn gold full" data-act="enrol" data-p="${main.id}">Reserve my seat</button>
+ <div class="next"><span>Next live lesson</span><b>${fmtNext(nc)}</b></div></div></div></section>
+
+<section class="sec" id="features"><div class="wrap"><div class="ctr"><div class="eyebrow">Everything in one place</div><h2 class="h2">A complete SAT EBRW learning space</h2><p class="lead">Learn live, revise on demand, practise by question type, and prove your progress every month.</p></div>
+<div class="grid g3" style="margin-top:42px">
+${[['▶','Lessons that are organized','Every lesson has four parts: recorded video, PDF notes, materials and homework.'],['⏰','Homework with deadlines','Clear deadlines at 19:59 on lesson days, with a live countdown on your dashboard.'],['📝','Full DSAT mock tests','Complete digital-SAT style mocks to build stamina and track your real level.'],['🎯','Type-based practice','Drill each question type separately — from central ideas to punctuation boundaries.'],['🧠','Vocabulary lists & games','Word lists, flashcards, quizzes, a matching game and Jeopardy.'],['📈','Tracker & monthly exam','Study-hours pie chart, score trend and a monthly exam with a minimum target.']].map(f=>`<div class="card"><div class="ico">${f[0]}</div><h3>${f[1]}</h3><p>${f[2]}</p></div>`).join('')}
+</div></div></section>
+
+<section class="sec band" id="curriculum"><div class="wrap"><div class="eyebrow">Curriculum</div><h2 class="h2">Built around the four SAT domains</h2><p class="lead">A clear path from orientation to exam-level accuracy. Open a domain to see its lessons.</p>
+<div style="margin-top:34px">
+${['Foundations',...D].map((d,i)=>`<details class="acc" ${i===1?'open':''}><summary><span class="num">${i||'•'}</span><span>${esc(d)}<div class="small mut" style="font-weight:400">${esc(DESC[d])}</div></span></summary><div class="in">${lessonsBy(d).map(l=>`<div class="lrow"><span>${l.free?'🔓':'▶'}</span><span style="flex:1;color:var(--ink)">Lesson ${l.n} · ${esc(l.title)}</span>${l.free?'<span class="tag ok">Free preview</span>':''}</div>`).join('')}</div></details>`).join('')}
+</div></div></section>
+
+<section class="sec" id="pricing"><div class="wrap"><div class="ctr"><div class="eyebrow">Courses &amp; pricing</div><h2 class="h2">Choose how you want to learn</h2><p class="lead">Transparent pricing in UZS. Payment is completed one-on-one with the director on Telegram.</p></div>
+<div class="grid g3" style="margin-top:50px">${PLANS.map((p,i)=>`<div class="card plan ${i===0?'hot':''}">${p.tag?`<span class="badge">${esc(p.tag)}</span>`:''}<h3>${esc(p.name)}</h3><div class="pr">${fmt(p.price)}${p.old?`<s>${fmt(p.old)}</s>`:''}</div><div class="small mut">per payment period</div><ul>${p.features.map(f=>`<li>${esc(f)}</li>`).join('')}</ul><button class="btn ${i===0?'gold':'line'} full" data-act="enrol" data-p="${p.id}">Enrol in ${esc(p.name)}</button></div>`).join('')}</div></div></section>
+
+<section class="sec band" id="teachers"><div class="wrap"><div class="eyebrow">Teachers &amp; schedule</div><h2 class="h2">Learn with the founder of ${CONFIG.school}</h2>
+<div class="grid g2" style="margin-top:34px;align-items:start">
+<div class="card"><div class="tcard"><img class="photo" src="${PHOTO}" alt="Abduaziz Rustamov, founder of ${CONFIG.school}"><div><h3>Abduaziz Rustamov</h3><div class="small mut">English teacher · Founder of ${CONFIG.school}</div><div class="tags"><span class="tag gold">SAT EBRW</span><span class="tag">IELTS</span><span class="tag">Curriculum design</span><span class="tag">Student coaching</span></div></div></div>
+<p style="margin-top:20px">I design structured English programmes, build the classroom materials myself and coach every student toward exam-ready accuracy. I lead every SAT Cohort 1.0 lesson personally.</p>
+<ul class="ticks"><li>Founder of ${CONFIG.school}, building a full-service institution: IELTS, SAT, GRE/GMAT/LSAT preparation, university consulting and visa preparation.</li><li>Collaborates with IC IELTS Center on branding and content.</li><li>Teaching approach: clear structure, homework with deadlines, monthly exams under real conditions, and accountability for every student.</li></ul>
+<div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn dark sm" href="https://t.me/${CONFIG.tg}" target="_blank" rel="noopener">Message on Telegram</a><a class="btn line sm" href="tel:+${CONFIG.phone}">+998 88 920 98 88</a></div></div>
+<div class="card"><h3>Weekly schedule</h3><div class="scroll"><table><tr><th>Day</th><th>Time</th><th>Format</th></tr>${['Tuesday','Thursday','Saturday'].map(n=>`<tr><td><b>${n}</b></td><td>19:15–20:30</td><td>Live lesson</td></tr>`).join('')}<tr><td><b>Sunday</b></td><td>See Telegram</td><td><span class="tag ok">Free offline class</span></td></tr></table></div><p class="small mut" style="margin-top:12px">Next live lesson: <b style="color:var(--ink)">${fmtNext(nc)}</b><br>Homework deadline: 19:59 on the day of the next lesson.</p></div>
+</div></div></section>
+
+<section class="sec" id="try"><div class="wrap" style="max-width:760px"><div class="ctr"><div class="eyebrow">Try it now</div><h2 class="h2">A free sample question</h2></div>
+<div class="card" style="margin-top:28px"><div class="small mut" style="margin-bottom:10px"><span class="tag gold">${esc(sq.d)}</span></div><div class="passage">${esc(sq.p)}</div><b>${esc(sq.q)}</b>
+${sq.o.map((o,i)=>`<button class="opt ${picked!=null?(i===sq.a?'right':i===picked?'wrong':''):''}" ${picked!=null?'disabled':''} data-act="sqpick" data-i="${i}"><b>${'ABCD'[i]}.</b> ${esc(o)}</button>`).join('')}
+${picked!=null?`<div class="expl"><b>${picked===sq.a?'Correct.':'Not quite.'}</b> ${esc(sq.e)}</div><div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap"><button class="btn line sm" data-act="sqnext">Another question</button><button class="btn gold sm" data-act="go" data-v="register">Take the full diagnostic — free</button></div>`:''}</div></div></section>
+
+<section class="sec band"><div class="wrap" style="max-width:820px"><div class="ctr"><div class="eyebrow">FAQ</div><h2 class="h2">Good questions</h2></div><div style="margin-top:30px">${FAQ.map(f=>`<details class="acc"><summary>${esc(f[0])}</summary><div class="in">${esc(f[1])}</div></details>`).join('')}</div></div></section>
+
+<section class="sec" id="contact"><div class="wrap"><div class="grid g2" style="align-items:start">
+<div><div class="eyebrow">Contact</div><h2 class="h2">Talk to us on your favourite app</h2><p class="lead">Questions about the cohort, schedule or payment? Write to us — we reply fast.</p>
+<div style="display:grid;gap:12px;margin-top:24px;max-width:380px"><a class="btn dark" href="https://t.me/${CONFIG.tg}" target="_blank" rel="noopener">✈ Telegram · @${CONFIG.tg}</a><a class="btn gold" href="https://wa.me/${CONFIG.phone}" target="_blank" rel="noopener">💬 WhatsApp · +998 88 920 98 88</a><a class="btn line" href="tel:+${CONFIG.phone}">📞 Call us</a></div></div>
+<form class="card" data-form="contact"><h3 style="margin-bottom:16px">Send a message</h3><div class="row2"><div class="fg"><label>Your name</label><input name="name" required></div><div class="fg"><label>Send via</label><select name="via"><option value="tg">Telegram</option><option value="wa">WhatsApp</option></select></div></div><div class="fg"><label>Message</label><textarea name="msg" rows="4" required placeholder="Hi! I'd like to know more about SAT Cohort 1.0…"></textarea></div><button class="btn gold full" type="submit">Open chat with message</button></form>
+</div></div></section>`;
+}
+
+/* ---------- auth ---------- */
+const loginHtml=()=>`<div class="auth"><div class="card"><div class="eyebrow">Welcome back</div><h2 class="h2" style="font-size:30px">Log in</h2>
+<form data-form="login"><div class="fg"><label>Email</label><input name="email" type="email" required autocomplete="email"></div><div class="fg"><label>Password</label><input name="pass" type="password" required autocomplete="current-password"></div>${S.err?`<div class="err">${esc(S.err)}</div>`:''}<button class="btn gold full" type="submit">Log in</button></form>
+<p class="small mut" style="margin-top:16px">No account? <a style="color:var(--gold);font-weight:600" data-act="go" data-v="register">Register</a></p></div></div>`;
+const registerHtml=()=>{const p=S.pend?planOf(S.pend):null;return `<div class="auth"><div class="card"><div class="eyebrow">Student registration</div><h2 class="h2" style="font-size:30px">Create your account</h2>${p?`<p class="small mut">After registering you will complete payment for <b>${esc(p.name)}</b> with the director on Telegram.</p>`:''}
+<form data-form="register"><div class="fg"><label>Full name</label><input name="name" required autocomplete="name"></div><div class="row2"><div class="fg"><label>Email</label><input name="email" type="email" required autocomplete="email"></div><div class="fg"><label>Phone</label><input name="phone" type="tel" required placeholder="+998 …"></div></div><div class="row2"><div class="fg"><label>Target EBRW score</label><select name="target">${[600,650,700,720,750,780,800].map(n=>`<option ${n===700?'selected':''}>${n}</option>`).join('')}</select></div><div class="fg"><label>Current level</label><select name="level"><option>Beginner</option><option selected>Intermediate</option><option>Advanced</option></select></div></div><div class="fg"><label>Password (min 6 characters)</label><input name="pass" type="password" minlength="6" required autocomplete="new-password"></div>${S.err?`<div class="err">${esc(S.err)}</div>`:''}<button class="btn gold full" type="submit">Create account</button></form>
+<p class="small mut" style="margin-top:16px">Already registered? <a style="color:var(--gold);font-weight:600" data-act="go" data-v="login">Log in</a></p></div></div>`};
+
+/* ---------- dashboard ---------- */
+const TABS=[['overview','Overview'],['lessons','Lessons'],['type','Type practice'],['mock','Mock tests'],['exam','Monthly exam'],['vocab','Vocabulary'],['tracker','Tracker'],['coins','Coins'],['account','Account']];
+function dashHtml(u){
+ const red=failedMonths(u).length>0;
+ const body={overview:dOverview,lessons:dLessons,type:dType,mock:dMock,exam:dExam,vocab:dVocab,tracker:dTracker,coins:dCoins,account:dAccount}[S.tab](u);
+ const redBanner=red?`<div class="alert red" role="alert"><div class="ai">⛔</div><div class="at"><b>Your account is RED — monthly minimum score not reached</b><span>Missed: ${failedMonths(u).map(m=>fmonth(m)+' (min '+CONFIG.targets[m]+')').join(', ')}. To restore it, earn ${CONFIG.coinsToRestore} coins by solving math &amp; logic problems.</span></div><button class="btn dark sm" data-act="tab" data-t="coins">Earn coins</button></div>`:'';
+ return `<div class="wrap ${red?'redmode':''}"><div class="dhead"><div class="eyebrow">Student dashboard</div><h2 class="h2" style="font-size:32px;margin-bottom:4px">Hello, ${esc(u.name.split(' ')[0])} ${red?'🔴':''}</h2></div>${payBanner(u)}${satBanner()}${redBanner}<div class="tabs" style="margin-top:16px">${TABS.map(t=>`<button class="tab ${S.tab===t[0]?'on':''}" data-act="tab" data-t="${t[0]}">${t[1]}</button>`).join('')}</div><div style="padding-bottom:70px">${body}</div></div>`;
+}
+const gate=(msg)=>`<div class="card ctr"><div class="ico" style="margin:0 auto 14px">🔒</div><h3>Enrolment required</h3><p style="margin:8px 0 18px">${msg}</p><button class="btn gold" data-act="enrol" data-p="cohort">Pay via Telegram · ${fmt(PLANS[0].price)}</button></div>`;
+const hwStatus=(u,l)=>{const i=l.n-1,due=hwDue(i),sub=u.prog.hw[l.id];if(sub)return{t:'Submitted',c:'ok'};if(Date.now()>due)return{t:'Overdue',c:'bad'};return{t:left(due-Date.now())+' left',c:'gold'}};
+function dOverview(u){
+ const lp=LESSONS.filter(l=>u.prog.lessons[l.id]).length,hp=LESSONS.filter(l=>u.prog.hw[l.id]).length,ls=lastScore(u);
+ const nextHw=LESSONS.find(l=>!u.prog.hw[l.id]&&hwDue(l.n-1)>new Date()&&(l.free||hasAccess(u)));
+ const nextL=LESSONS.find(l=>!u.prog.lessons[l.id]&&(l.free||hasAccess(u)));
+ return `<div class="kpis"><div class="kpi"><b>${lp}/${LESSONS.length}</b><span>Lessons completed</span></div><div class="kpi"><b>${hp}/${LESSONS.length}</b><span>Homework submitted</span></div><div class="kpi"><b>${ls?ls.score:'—'}</b><span>Latest score</span></div><div class="kpi"><b>${streak(u)} 🔥</b><span>Day streak</span></div></div>
+ <div class="two"><div class="card"><h3>Your learning path</h3><div class="bar" style="margin:14px 0 6px"><i style="width:${Math.round(lp/LESSONS.length*100)}%"></i></div><div class="small mut">${Math.round(lp/LESSONS.length*100)}% of lessons completed</div>
+ ${nextL?`<div class="item" style="margin-top:18px"><div class="grow"><div class="s">Continue with</div><h4>Lesson ${nextL.n} · ${esc(nextL.title)}</h4></div><button class="btn gold sm" data-act="tab" data-t="lessons" data-open="${nextL.id}">Open</button></div>`:''}
+ ${nextHw?`<div class="item"><div class="grow"><div class="s">Next homework deadline</div><h4>Lesson ${nextHw.n} · ${fmtDT(hwDue(nextHw.n-1))}</h4><div class="s">${left(hwDue(nextHw.n-1)-Date.now())} left</div></div><button class="btn line sm" data-act="tab" data-t="lessons" data-open="${nextHw.id}">View</button></div>`:''}
+ ${hasAccess(u)?'':`<div class="expl" style="margin-top:16px">You are on the free plan. <a style="color:var(--gold);font-weight:700" data-act="enrol" data-p="cohort">Enrol</a> to unlock all lessons, mocks and exams.</div>`}</div>
+ <div class="card"><h3>Next live lesson</h3><div class="serif" style="font-size:26px;margin:10px 0">${fmtNext(nextClass())}</div><p class="small mut">Tue / Thu / Sat · 19:15–20:30<br>Free offline class every Sunday</p><div style="margin-top:14px"><a class="btn dark sm" href="https://t.me/${CONFIG.tg}" target="_blank" rel="noopener">Telegram teacher</a></div></div></div>`;
+}
+function catRow(ic,title,sub,acts){return `<div class="cat"><div class="ci">${ic}</div><div class="cb"><b>${title}</b><div class="s">${sub}</div>${acts?`<div class="acts">${acts}</div>`:''}</div></div>`}
+function lessonBody(u,l){
+ const st=hwStatus(u,l),due=hwDue(l.n-1);
+ const vid=catRow('🎬','Recorded video lesson',l.video?'Watch the full recording of the live lesson.':'The recording will be uploaded after the live lesson.',l.video?`<button class="btn gold sm" data-act="openlesson" data-id="${l.id}">▶ Watch</button><button class="btn line sm" data-act="togglelesson" data-id="${l.id}">${u.prog.lessons[l.id]?'✓ Completed':'Mark complete'}</button>`:`<button class="btn line sm" data-act="togglelesson" data-id="${l.id}">${u.prog.lessons[l.id]?'✓ Completed':'Mark complete'}</button>`);
+ const notes=catRow('📄','PDF lesson notes',l.notes?'Lesson notes in PDF format.':'PDF notes will be shared with this lesson.',l.notes?`<a class="btn gold sm" href="${esc(l.notes)}" target="_blank" rel="noopener">Open PDF</a>`:'');
+ const mats=catRow('📎','Materials',l.materials.length?'Extra resources for this lesson.':'Materials will be added soon.',l.materials.map(m=>`<a class="btn line sm" href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.t)}</a>`).join(''));
+ const hw=catRow('📝','Homework',(l.hw.text?esc(l.hw.text)+'<br>':'Homework will be posted after the live lesson.<br>')+`Deadline: <b>${fmtDT(due)}</b> · <span class="tag ${st.c}">${st.t}</span>`,`${l.hw.url?`<a class="btn gold sm" href="${esc(l.hw.url)}" target="_blank" rel="noopener">Homework PDF</a>`:''}<a class="btn line sm" href="${tgLink('Homework — Lesson '+l.n+' ('+l.title+') — '+u.name)}" target="_blank" rel="noopener">Send on Telegram</a><button class="btn ${u.prog.hw[l.id]?'line':'dark'} sm" data-act="hwdone" data-id="${l.id}">${u.prog.hw[l.id]?'✓ Submitted':'Mark as submitted'}</button>`);
+ return vid+notes+mats+hw;
+}
+function dLessons(u){
+ return `<p class="mut" style="margin-top:0">Each lesson has four parts. Homework is due at <b>19:59 on the day of the next lesson</b>.</p>`+LESSONS.map(l=>{
+  const ok=l.free||hasAccess(u),open=S.openL===l.id&&ok,st=hwStatus(u,l);
+  return `<div class="lcard ${ok?'':'lock'}"><button class="lhead" data-act="${ok?'openL':'locked'}" data-id="${l.id}"><span class="num">${l.n}</span><span class="grow"><h4>Lesson ${l.n} · ${esc(l.title)}</h4><span class="small mut">${esc(l.domain)} · Live ${fmtDT(liveAt(l.n-1))}</span></span>${ok?`<span class="tag ${u.prog.lessons[l.id]?'ok':''} hide-s">${u.prog.lessons[l.id]?'Completed':'In progress'}</span><span class="tag ${st.c} hide-s">HW: ${st.t}</span><span>${open?'▲':'▼'}</span>`:'<span class="tag">🔒 Locked</span>'}</button>${open?`<div class="lbody">${lessonBody(u,l)}</div>`:''}</div>`}).join('');
+}
+function dType(u){
+ if(S.test)return testRunHtml();if(S.res)return testResHtml(u);
+ if(!hasAccess(u))return gate('Type-based practice is available to enrolled students.');
+ return `<p class="mut" style="margin-top:0">Practise one question type at a time. All practice materials will appear in each card.</p>`+D.map(d=>`<h3 style="margin:24px 0 12px;font-size:20px">${esc(d)}</h3><div class="grid g2">${TYPES.filter(t=>t[2]===d).map(t=>{const n=BANK.filter(q=>q.t===t[0]).length,m=TYPE_MATERIALS[t[0]]||{};return `<div class="card flat"><h3 style="font-size:18px">${esc(t[1])}</h3><p class="small" style="margin:6px 0 12px">${n} online question${n===1?'':'s'}</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn gold sm" data-act="starttype" data-id="${t[0]}">Practise</button>${m.notes?`<a class="btn line sm" href="${esc(m.notes)}" target="_blank" rel="noopener">Notes PDF</a>`:''}${m.sheet?`<a class="btn line sm" href="${esc(m.sheet)}" target="_blank" rel="noopener">Task sheet</a>`:''}${!m.notes&&!m.sheet?'<span class="tag">Materials coming soon</span>':''}</div></div>`}).join('')}</div>`).join('');
+}
+function dMock(u){
+ if(S.test)return testRunHtml();if(S.res)return testResHtml(u);
+ const hist=[...u.prog.tests].reverse();
+ return `<h3 style="margin:0 0 12px">Online diagnostic</h3><div class="card" style="margin-bottom:24px"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><div><h3>Mini diagnostic</h3><p style="margin:6px 0 0">16 questions across all four domains · 20 minutes · instant explanations</p></div><span class="tag ok">Free</span></div><div style="margin-top:16px"><button class="btn gold sm" data-act="startdiag">Start diagnostic</button></div></div>
+ <h3 style="margin:0 0 12px">SAT practice tests — Full DSAT mocks</h3><div class="grid g2">${MOCKS.map(m=>{const ok=hasAccess(u),sc=u.prog.mocks[m.id];return `<div class="card ${ok?'':'lock'}"><h3>${esc(m.name)}</h3><p style="margin:6px 0 14px">${esc(m.desc)}</p>${ok?`<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">${m.link?`<a class="btn gold sm" href="${esc(m.link)}" target="_blank" rel="noopener">Open test</a>`:'<span class="tag">Materials coming soon</span>'}</div><form data-form="mockscore" data-id="${m.id}" style="display:flex;gap:8px"><input name="score" type="number" min="200" max="800" step="10" placeholder="Your score (200–800)" value="${sc||''}" required style="padding:8px 12px"><button class="btn dark sm" type="submit">Save</button></form>`:`<button class="btn line sm" data-act="locked">🔒 Unlock</button>`}</div>`}).join('')}</div>
+ <h3 style="margin:34px 0 12px">Results history</h3>${hist.length?`<div class="card flat scroll"><table><tr><th>Date</th><th>Test</th><th>Correct</th><th>Score</th><th></th></tr>${hist.map(r=>`<tr><td>${fdate(r.date)}</td><td>${esc(r.name)}</td><td>${r.correct}/${r.total}</td><td><b>${r.score}</b></td><td>${r.det&&r.det.length?`<button class="btn line sm" data-act="viewres" data-id="${r.id}">Review</button>`:''}</td></tr>`).join('')}</table></div>`:'<p class="mut">No results yet. Take the free diagnostic to get started.</p>'}`;
+}
+function examState(){const n=new Date(),dim=new Date(n.getFullYear(),n.getMonth()+1,0).getDate(),openDay=dim-CONFIG.examWindowDays+1;return{ym:ym(),min:CONFIG.targets[ym()],open:n.getDate()>=openDay,openDay,dim}}
+function dExam(u){
+ if(S.test)return testRunHtml();if(S.res)return testResHtml(u);
+ if(!hasAccess(u))return gate('The monthly exam is available to enrolled students.');
+ const e=examState(),done=u.prog.exams[e.ym],start=u.startYM||u.created.slice(0,7);
+ const past=Object.keys(CONFIG.targets).filter(m=>m<=e.ym&&m>=start);
+ const status=e.min==null?'<p class="mut">No exam is scheduled this month.</p>':done?`<div class="serif" style="font-size:44px">${done.score}</div><p class="small mut">Your ${fmonth(e.ym)} exam · minimum ${e.min} · ${done.score>=e.min?'<b style="color:var(--ok)">Target reached ✓</b>':'<b style="color:var(--bad)">Below target</b>'}</p>`:e.open?`<p style="margin:0 0 14px">The ${fmonth(e.ym)} exam is <b style="color:var(--ok)">open now</b>. Minimum score: <b>${e.min}</b>.</p><button class="btn gold" data-act="examrules">Start exam under exam conditions</button>`:`<p style="margin:0">The ${fmonth(e.ym)} exam opens on <b>${e.openDay} ${new Date().toLocaleDateString('en-GB',{month:'long'})}</b> and stays open until the end of the month. Minimum score: <b>${e.min}</b>.</p>`;
+ return `<div class="card"><div class="eyebrow">Monthly exam</div><h3 style="margin:6px 0 14px">${fmonth(e.ym)}</h3>${status}</div>
+ <h3 style="margin:28px 0 12px">Monthly targets</h3><div class="card flat scroll"><table><tr><th>Month</th><th>Minimum</th><th>Your score</th><th>Status</th></tr>${past.map(m=>{const r=u.prog.exams[m],ok=r&&r.score>=CONFIG.targets[m],cl=u.prog.cleared[m];return `<tr><td>${fmonth(m)}</td><td>${CONFIG.targets[m]}</td><td>${r?r.score:'—'}</td><td>${ok?'<span class="tag ok">Reached</span>':m===e.ym?'<span class="tag">In progress</span>':cl?'<span class="tag ok">Restored</span>':'<span class="tag bad">Missed</span>'}</td></tr>`}).join('')||'<tr><td colspan="4" class="mut">No targets yet.</td></tr>'}</table></div>
+ <p class="small mut" style="margin-top:12px">Miss a month's minimum and your account turns red until you earn ${CONFIG.coinsToRestore} coins by solving math &amp; logic problems.</p>`;
+}
+function testRunHtml(){
+ const t=S.test,q=t.qs[t.i];
+ return `<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><div><span class="tag gold">${esc(t.name)}</span> <span class="small mut">Question ${t.i+1} of ${t.qs.length}</span>${t.exam?` <span class="tag ${t.leaves?'bad':''}">Exam mode · page leaves: ${t.leaves}</span>`:''}</div><div class="timer" id="tm">--:--</div></div>
+ <div class="qnav">${t.qs.map((x,i)=>`<button class="qn ${i===t.i?'cur':''} ${t.ans[i]!=null?'ans':''}" data-act="qgo" data-i="${i}">${i+1}</button>`).join('')}</div>
+ <div class="small mut" style="margin-bottom:8px">${t.exam?'':esc(q.d)}</div><div class="passage">${esc(q.p)}</div><b>${esc(q.q)}</b>
+ ${q.o.map((o,i)=>`<button class="opt ${t.ans[t.i]===i?'sel':''}" data-act="qpick" data-i="${i}"><b>${'ABCD'[i]}.</b> ${esc(o)}</button>`).join('')}
+ <div style="display:flex;justify-content:space-between;gap:10px;margin-top:20px;flex-wrap:wrap"><button class="btn line" data-act="qprev" ${t.i===0?'disabled':''}>← Back</button><div style="display:flex;gap:10px">${t.i<t.qs.length-1?'<button class="btn dark" data-act="qnext">Next →</button>':''}<button class="btn gold" data-act="finish">Submit</button></div></div></div>`;
+}
+function testResHtml(u){
+ const r=S.res;
+ const dom=D.map(d=>{const a=r.det.filter(x=>BANK[x.b].d===d);return a.length?[d,a.filter(x=>x.ok).length,a.length]:null}).filter(Boolean);
+ return `<div class="card"><div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap"><div class="ring" style="--p:${Math.round(r.correct/r.total*100)}"><span>${r.correct}/${r.total}</span></div><div><div class="eyebrow">${esc(r.name)} · ${fdate(r.date)}</div><div class="serif" style="font-size:44px">${r.score}</div><div class="small mut">Estimated EBRW score (indicative, not an official conversion)</div></div></div>
+ <h3 style="margin:26px 0 12px;font-size:18px">By domain</h3>${dom.map(d=>`<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between" class="small"><span>${esc(d[0])}</span><b>${d[1]}/${d[2]}</b></div><div class="bar"><i style="width:${d[1]/d[2]*100}%"></i></div></div>`).join('')}
+ <h3 style="margin:26px 0 12px;font-size:18px">Review</h3>${r.det.map((x,n)=>{const q=BANK[x.b];return `<details class="acc"><summary><span class="chk ${x.ok?'on':''}" style="${x.ok?'':'background:var(--bad);border-color:var(--bad);color:#fff'}">${x.ok?'✓':'✕'}</span><span style="font-weight:500;font-size:14.5px">Q${n+1}. ${esc(q.q.slice(0,80))}${q.q.length>80?'…':''}</span></summary><div class="in"><div class="passage">${esc(q.p)}</div>${q.o.map((o,i)=>`<div class="opt ${i===q.a?'right':i===x.pick?'wrong':''}" style="cursor:default"><b>${'ABCD'[i]}.</b> ${esc(o)}</div>`).join('')}<div class="expl">${x.pick==null?'<b>Unanswered.</b> ':''}${esc(q.e)}</div></div></details>`}).join('')}
+ <button class="btn gold" style="margin-top:14px" data-act="backtests">Back</button></div>`;
+}
+
+/* ---- vocabulary ---- */
+const pool=()=>S.vl==='all'?VOCAB:listWords(+S.vl);
+function dVocab(u){
+ const sub=[['lists','Lists'],['cards','Flashcards'],['quiz','Quiz'],['match','Match'],['jp','Jeopardy']];
+ const head=`<div class="tabs" style="border:0;padding-top:0">${sub.map(s=>`<button class="tab ${S.vsub===s[0]?'on':''}" data-act="vsub" data-t="${s[0]}">${s[1]}</button>`).join('')}<span class="small mut" style="margin-left:auto;align-self:center;white-space:nowrap">${Object.keys(u.prog.known).length}/${VOCAB.length} known</span></div>${S.vsub!=='lists'&&S.vsub!=='jp'?`<div style="max-width:260px;margin-bottom:16px"><select data-sel="vl">${[['all','All words (40)'],...[...Array(NLISTS)].map((_,i)=>[String(i),'List '+(i+1)+' (10 words)'])].map(o=>`<option value="${o[0]}" ${String(S.vl)===o[0]?'selected':''}>${o[1]}</option>`).join('')}</select></div>`:''}`;
+ if(S.vsub==='lists'){return head+`<div class="grid g2">${[...Array(NLISTS)].map((_,i)=>`<div class="card flat"><h3 style="font-size:18px;margin-bottom:10px">List ${i+1}</h3>${listWords(i).map(w=>`<div class="lrow"><b style="min-width:110px">${esc(w[0])}</b><span class="mut small">${esc(w[1])}</span>${u.prog.known[w[0]]?'<span class="tag ok" style="margin-left:auto">known</span>':''}</div>`).join('')}<button class="btn line sm" style="margin-top:12px" data-act="practicelist" data-i="${i}">Practise this list</button></div>`).join('')}</div>`}
+ if(S.vsub==='cards'){
+  const P=pool();if(!S.fc||!S.fc.deck.length||S.fc.vl!==S.vl)S.fc={vl:S.vl,deck:shuffle(P.map(w=>w[0]).filter(w=>!u.prog.known[w])),i:0,flip:false};
+  const f=S.fc;if(!f.deck.length)return head+'<div class="card ctr"><h3>All words in this set learned 🎉</h3><p>You marked every word as known.</p><button class="btn line" data-act="resetknown">Reset progress</button></div>';
+  const w=VOCAB.find(x=>x[0]===f.deck[f.i%f.deck.length]);
+  return head+`<div style="max-width:560px;margin:0 auto"><div class="flash ${f.flip?'flip':''}" data-act="flip"><div class="fi"><div class="face front"><div><div class="small" style="color:#aab3d2;letter-spacing:.14em">TAP TO FLIP</div><div class="serif">${esc(w[0])}</div></div></div><div class="face back"><div><div class="small mut">Definition</div><b>${esc(w[1])}</b></div></div></div></div><div style="display:flex;gap:12px;justify-content:center;margin-top:18px"><button class="btn line" data-act="fcagain">Review again</button><button class="btn gold" data-act="fcknown">I know it ✓</button></div><p class="small mut ctr" style="margin-top:12px">${f.deck.length} words left in this deck</p></div>`;
+ }
+ if(S.vsub==='quiz'){
+  if(!S.vq)return head+`<div class="card ctr" style="max-width:560px;margin:0 auto"><h3>Vocabulary quiz</h3><p style="margin:8px 0 18px">10 multiple-choice questions. Pick the correct meaning.</p>${u.prog.quiz.length?`<p class="small mut">Best: <b style="color:var(--ink)">${Math.max(...u.prog.quiz.map(q=>q.score))}/10</b> · Attempts: ${u.prog.quiz.length}</p>`:''}<button class="btn gold" data-act="startquiz">Start quiz</button></div>`;
+  const q=S.vq;if(q.i>=q.qs.length)return head+`<div class="card ctr" style="max-width:560px;margin:0 auto"><div class="serif" style="font-size:54px;color:var(--gold)">${q.score}/${q.qs.length}</div><p>${q.score>=q.qs.length*.9?'Outstanding!':q.score>=q.qs.length*.6?'Nice work — keep going.':'Keep practising with the flashcards.'}</p><button class="btn gold" data-act="startquiz">Play again</button></div>`;
+  const c=q.qs[q.i];
+  return head+`<div class="card" style="max-width:600px;margin:0 auto"><div class="small mut">Question ${q.i+1} of ${q.qs.length} · Score ${q.score}</div><div class="bar" style="margin:8px 0 18px"><i style="width:${q.i/q.qs.length*100}%"></i></div><p class="mut" style="margin:0">What is the meaning of</p><div class="serif" style="font-size:34px;margin:4px 0 8px">${esc(c.w)}</div>${c.o.map((o,i)=>`<button class="opt ${q.pick!=null?(o===c.def?'right':i===q.pick?'wrong':''):''}" ${q.pick!=null?'disabled':''} data-act="vqpick" data-i="${i}">${esc(o)}</button>`).join('')}${q.pick!=null?'<button class="btn dark" style="margin-top:16px" data-act="vqnext">Continue →</button>':''}</div>`;
+ }
+ if(S.vsub==='match'){
+  const m=S.mg;
+  if(!m)return head+`<div class="card ctr" style="max-width:560px;margin:0 auto"><h3>Word match</h3><p style="margin:8px 0 18px">Match six words to their meanings as fast as you can.</p>${u.prog.match?`<p class="small mut">Best time: <b style="color:var(--ink)">${u.prog.match}s</b></p>`:''}<button class="btn gold" data-act="startmatch">Start game</button></div>`;
+  return head+`<div style="max-width:640px;margin:0 auto"><div style="display:flex;justify-content:space-between;margin-bottom:12px"><span class="timer" id="mt">${m.t}s</span><span class="small mut">Moves: ${m.moves}</span></div><div class="tiles">${m.tiles.map((t,i)=>`<button class="tile ${m.sel===i?'sel':''} ${m.done.includes(t.k)?'done':''} ${m.bad===i?'no':''}" data-act="mtile" data-i="${i}" ${m.done.includes(t.k)?'disabled':''}>${esc(t.s)}</button>`).join('')}</div>${m.done.length===6?`<div class="card ctr" style="margin-top:18px"><h3>Completed in ${m.t}s 🎉</h3><button class="btn gold" style="margin-top:12px" data-act="startmatch">Play again</button></div>`:''}</div>`;
+ }
+ /* jeopardy */
+ const j=S.jp;
+ if(!j)return head+`<div class="card ctr" style="max-width:560px;margin:0 auto"><h3>Vocabulary Jeopardy</h3><p style="margin:8px 0 18px">Four categories (your four word lists), five clues each. Read the definition, pick the word. Harder clues are worth more points. Best score: <b style="color:var(--ink)">${u.prog.jp||0}</b></p><button class="btn gold" data-act="startjp">Start game</button></div>`;
+ if(j.cur){const c=j.cur,w=j.cats[c.c].words[c.r];return head+`<div class="card" style="max-width:620px;margin:0 auto"><div class="small mut">${esc(j.cats[c.c].name)} · for <b style="color:var(--gold)">${(c.r+1)*100}</b> points</div><p class="mut" style="margin:14px 0 4px">Which word means:</p><div class="serif" style="font-size:24px;margin-bottom:8px">“${esc(w.def)}”</div>${w.o.map((o,i)=>`<button class="opt ${c.pick!=null?(o===w.w?'right':i===c.pick?'wrong':''):''}" ${c.pick!=null?'disabled':''} data-act="jppick" data-i="${i}">${esc(o)}</button>`).join('')}${c.pick!=null?'<button class="btn dark" style="margin-top:16px" data-act="jpback">Back to board →</button>':''}</div>`}
+ const total=Object.keys(j.used).length;
+ return head+`<div style="max-width:680px;margin:0 auto"><div style="display:flex;justify-content:space-between;margin-bottom:12px"><span class="timer">Score: ${j.score}</span><span class="small mut">${total}/20 clues</span></div><div class="jp">${j.cats.map(c=>`<div class="hd">${esc(c.name)}</div>`).join('')}${[0,1,2,3,4].map(r=>j.cats.map((c,ci)=>`<button class="cell ${j.used[ci+'-'+r]?'used':''}" data-act="jpclick" data-c="${ci}" data-r="${r}">${(r+1)*100}</button>`).join('')).join('')}</div>${total===20?`<div class="card ctr" style="margin-top:18px"><h3>Final score: ${j.score} 🎉</h3><button class="btn gold" style="margin-top:12px" data-act="startjp">Play again</button></div>`:''}</div>`;
+}
+
+/* ---- tracker ---- */
+function pieSvg(vals){
+ const tot=vals.reduce((a,b)=>a+b,0);if(!tot)return '<div class="mut small">No study hours logged yet.</div>';
+ let a0=-Math.PI/2,out='';const R=80,C=100;
+ vals.forEach((v,i)=>{if(!v)return;const a1=a0+v/tot*2*Math.PI,large=a1-a0>Math.PI?1:0;
+  if(v===tot)out+=`<circle cx="${C}" cy="${C}" r="${R}" fill="${CCOL[i]}"/>`;
+  else out+=`<path d="M${C} ${C} L${C+R*Math.cos(a0)} ${C+R*Math.sin(a0)} A${R} ${R} 0 ${large} 1 ${C+R*Math.cos(a1)} ${C+R*Math.sin(a1)} Z" fill="${CCOL[i]}"/>`;a0=a1});
+ return `<svg viewBox="0 0 200 200" width="190" height="190" role="img" aria-label="Study hours by category">${out}<circle cx="${C}" cy="${C}" r="44" fill="var(--card)"/><text x="${C}" y="${C-2}" text-anchor="middle" font-size="22" font-weight="700" font-family="Fraunces,serif" fill="var(--ink)">${(tot/60).toFixed(1)}</text><text x="${C}" y="${C+16}" text-anchor="middle" font-size="11" fill="var(--mut)">hours</text></svg>`;
+}
+function lineChart(pts){
+ if(!pts.length)return '<p class="mut">Take a test to see your score trend.</p>';
+ const W=520,H=190,pl=36,pb=26,pt=14,pr=14,mn=200,mx=800;
+ const X=i=>pl+(pts.length===1?(W-pl-pr)/2:i*(W-pl-pr)/(pts.length-1)),Y=v=>pt+(mx-v)/(mx-mn)*(H-pt-pb);
+ const path=pts.map((p,i)=>(i?'L':'M')+X(i)+' '+Y(p.v)).join(' ');
+ return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto" role="img" aria-label="Score trend">${[200,400,600,800].map(v=>`<line x1="${pl}" x2="${W-pr}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="4" y="${Y(v)+4}" font-size="11" fill="var(--mut)">${v}</text>`).join('')}<path d="${path}" fill="none" stroke="var(--gold)" stroke-width="2.5"/>${pts.map((p,i)=>`<circle cx="${X(i)}" cy="${Y(p.v)}" r="4.5" fill="var(--gold)"/><text x="${X(i)}" y="${Y(p.v)-10}" font-size="11" text-anchor="middle" fill="var(--ink)">${p.v}</text>`).join('')}</svg>`;
+}
+function dTracker(u){
+ const logs=S.pie==='month'?u.prog.log.filter(l=>l.date.slice(0,7)===ym()):u.prog.log;
+ const vals=CATS.map(c=>logs.filter(l=>(l.cat||'Reading')===c).reduce((a,b)=>a+b.min,0));
+ const days=[...Array(7)].map((_,i)=>{const d=new Date();d.setDate(d.getDate()-6+i);const k=ld(d);return{l:d.toLocaleDateString('en-GB',{weekday:'short'}),m:u.prog.log.filter(x=>x.date===k).reduce((a,b)=>a+b.min,0)}});
+ const mxm=Math.max(60,...days.map(d=>d.m)),total=days.reduce((a,b)=>a+b.m,0),tg=Number(u.target)||700,ls=lastScore(u);
+ return `<div class="two"><div class="card"><h3>Hours dedicated to the SAT</h3><div style="display:flex;gap:8px;margin:12px 0"><button class="btn ${S.pie==='month'?'dark':'line'} sm" data-act="piemode" data-m="month">This month</button><button class="btn ${S.pie==='all'?'dark':'line'} sm" data-act="piemode" data-m="all">All time</button></div><div class="pie">${pieSvg(vals)}<div class="legend">${CATS.map((c,i)=>`<div><i style="background:${CCOL[i]}"></i>${c} <b>${(vals[i]/60).toFixed(1)} h</b></div>`).join('')}</div></div></div>
+ <form class="card" data-form="log"><h3>Log a study session</h3><div class="row2" style="margin-top:14px"><div class="fg"><label>Category</label><select name="cat">${CATS.map(c=>`<option>${c}</option>`).join('')}</select></div><div class="fg"><label>Minutes</label><input name="min" type="number" min="5" max="600" value="30" required></div></div><div class="fg"><label>What did you study?</label><input name="note" placeholder="e.g. Transitions practice" maxlength="80"></div><button class="btn gold full" type="submit">Add to log</button></form></div>
+ <div class="two" style="margin-top:20px"><div class="card"><h3>Score trend</h3><p class="small mut" style="margin:4px 0 12px">All tests, mocks and monthly exams · target <b style="color:var(--gold)">${tg}</b></p>${lineChart(u.prog.scores.map(t=>({v:t.score})))}<div class="bar" style="margin-top:14px"><i style="width:${ls?Math.max(0,Math.min(100,(ls.score-200)/(tg-200)*100)):0}%"></i></div><div class="small mut" style="margin-top:6px">${ls?`${ls.score} of ${tg} target`:'No score yet'}</div></div>
+ <div class="card"><h3>Last 7 days</h3><p class="small mut" style="margin:4px 0">${total} minutes this week · ${streak(u)}-day streak</p><div style="display:flex;gap:10px;align-items:flex-end;height:150px;margin-top:14px">${days.map(d=>`<div style="flex:1;text-align:center"><div style="height:${Math.round(d.m/mxm*110)+3}px;background:linear-gradient(180deg,var(--gold2),var(--gold));border-radius:8px 8px 3px 3px;opacity:${d.m?1:.25}" title="${d.m} min"></div><div class="small mut" style="margin-top:6px">${d.l}</div></div>`).join('')}</div></div></div>
+ <h3 style="margin:28px 0 12px">Scores by exam</h3>${u.prog.scores.length?`<div class="card flat scroll"><table><tr><th>Date</th><th>Test</th><th>Score</th></tr>${[...u.prog.scores].reverse().slice(0,12).map(s=>`<tr><td>${fdate(s.date)}</td><td>${esc(s.label)}</td><td><b>${s.score}</b></td></tr>`).join('')}</table></div>`:'<p class="mut">Your scores will appear here.</p>'}`;
+}
+
+/* ---- coins ---- */
+function newProblem(u){
+ const unsolved=LOGIC.map((p,i)=>i).filter(i=>!u.prog.solved['l'+i]);
+ if(unsolved.length&&Math.random()<.5){const i=unsolved[rnd(0,unsolved.length-1)],p=LOGIC[i];return{...p,id:'l'+i,pick:null}}
+ return{...genMath(),pick:null};
+}
+function dCoins(u){
+ const need=CONFIG.coinsToRestore,red=failedMonths(u).length>0;
+ if(!S.cp)S.cp=newProblem(u);const p=S.cp;
+ return `<div class="two"><div class="card"><div class="eyebrow">Coin arena</div><h3 style="margin:6px 0 10px">Solve a problem · earn ${CONFIG.coinsPerSolve} coins</h3><div class="passage" style="font-size:18px">${esc(p.q)}</div>${p.o.map((o,i)=>`<button class="opt ${p.pick!=null?(i===p.a?'right':i===p.pick?'wrong':''):''}" ${p.pick!=null?'disabled':''} data-act="cppick" data-i="${i}">${esc(o)}</button>`).join('')}${p.pick!=null?`<div class="expl">${p.pick===p.a?'<b>Correct!</b> +'+CONFIG.coinsPerSolve+' coins.':'<b>Not this time.</b> The correct answer is highlighted.'}</div><button class="btn dark" style="margin-top:14px" data-act="cpnext">Next problem →</button>`:''}</div>
+ <div class="card ctr"><h3>Your coins</h3><div class="serif" style="font-size:56px;color:var(--gold);margin:10px 0">🪙 ${u.prog.coins}</div><div class="bar"><i style="width:${Math.min(100,u.prog.coins/need*100)}%"></i></div><p class="small mut" style="margin:8px 0 16px">${need} coins restore a red account</p>${red?`<button class="btn gold full" data-act="restore" ${u.prog.coins<need?'disabled':''}>Restore my account (−${need} coins)</button>`:'<span class="tag ok">Your account is green ✓</span>'}</div></div>`;
+}
+
+function dAccount(u){
+ const pl=u.enrolled?planOf(u.enrolled):null,p=payState(u);
+ return `<div class="two"><form class="card" data-form="profile"><h3>Profile</h3><div class="fg" style="margin-top:14px"><label>Full name</label><input name="name" value="${esc(u.name)}" required></div><div class="row2"><div class="fg"><label>Phone</label><input name="phone" value="${esc(u.phone)}"></div><div class="fg"><label>Target score</label><select name="target">${[600,650,700,720,750,780,800].map(n=>`<option ${n==u.target?'selected':''}>${n}</option>`).join('')}</select></div></div><div class="fg"><label>Email</label><input value="${esc(u.email)}" disabled></div><button class="btn dark" type="submit">Save changes</button></form>
+ <div class="card"><h3>Your plan</h3><div style="margin:14px 0">${pl?`<span class="tag ok">Active</span> <b>${esc(pl.name)}</b>`:'<span class="tag">Free account</span>'}</div>${u.paidThrough?`<p class="small mut" style="margin:0 0 14px">Paid through <b style="color:var(--ink)">${fdate(u.paidThrough)}</b>${p&&p.lvl==='over'?' — <b style="color:var(--bad)">overdue</b>':''}</p>`:''}<button class="btn gold full" data-act="enrol" data-p="${u.enrolled||'cohort'}">${pl?'Renew via Telegram':'Enrol via Telegram'}</button><button class="btn line full" style="margin-top:12px" data-act="logout">Log out</button></div></div>
+ <form class="card" data-form="promo" style="margin-top:20px"><h3>Activate with promo code</h3><p class="small" style="margin:6px 0 14px">After you pay the director on Telegram you receive a personal promo code. Enter it here.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><input name="code" placeholder="XXXX-XXXX" style="max-width:240px;text-transform:uppercase" required><button class="btn gold" type="submit">Activate</button></div></form>`;
+}
+
+/* ---------- admin ---------- */
+const ATABS=[['codes','Promo codes'],['content','Lesson content'],['rules','Rules & previews']];
+function adminHtml(){
+ let b='';
+ if(S.atab==='codes'){
+  b=`<div class="two"><form class="card" data-form="gencode"><h3>Create a promo code</h3><p class="small" style="margin:6px 0 14px">Use the email the student registered with (it is in their Telegram message). The code only works for that email.</p><div class="fg"><label>Student email</label><input name="email" type="email" required></div><div class="row2"><div class="fg"><label>Plan</label><select name="plan">${PLANS.map(p=>`<option value="${p.id}">${esc(p.name)} — ${fmt(p.price)}</option>`).join('')}</select></div><div class="fg"><label>Access paid through</label><select name="ym">${months().map(m=>`<option value="${m}" ${m===ym()?'selected':''}>end of ${fmonth(m)}</option>`).join('')}</select></div></div><button class="btn gold full" type="submit">Generate code</button></form>
+  <div class="card"><h3>Latest code</h3>${S.gen?`<div class="serif" style="font-size:40px;color:var(--gold);letter-spacing:.06em;margin:14px 0">${esc(S.gen.code)}</div><p class="small mut" style="margin:0 0 14px">${esc(S.gen.email)} · ${esc(planOf(S.gen.plan).name)} · until ${fdate(lastDay(S.gen.ym))}</p><button class="btn dark sm" data-act="copycode" data-i="${esc(S.gen.code)}">Copy message for the student</button>`:'<p class="mut">Generate a code after the student pays you on Telegram. Send it to them and they activate it in <b>Account → Activate with promo code</b>.</p>'}</div></div>
+  <h3 style="margin:28px 0 12px">Codes created in this browser</h3>${DB.codes.length?`<div class="card flat scroll"><table><tr><th>Date</th><th>Email</th><th>Plan</th><th>Until</th><th>Code</th><th></th></tr>${[...DB.codes].reverse().map(c=>`<tr><td>${fdate(c.date)}</td><td>${esc(c.email)}</td><td>${esc(planOf(c.plan).name)}</td><td>${fdate(lastDay(c.ym))}</td><td><b>${esc(c.code)}</b></td><td><button class="btn ghost sm" data-act="delcode" data-id="${c.id}">✕</button></td></tr>`).join('')}</table></div>`:'<p class="mut">No codes yet.</p>'}`;
+ }
+ if(S.atab==='content'){
+  b=`<p class="mut" style="margin-top:0">Status of each lesson's four parts. To add a video, PDF, material or homework, send the links to Claude and the site is updated for everyone.</p><div class="card flat scroll"><table><tr><th>Lesson</th><th>Live lesson</th><th>Video</th><th>PDF notes</th><th>Materials</th><th>Homework</th><th>HW deadline</th></tr>${LESSONS.map(l=>`<tr><td><b>${l.n}</b> ${esc(l.title)}</td><td class="small">${fmtDT(liveAt(l.n-1))}</td><td>${l.video?'✓':'—'}</td><td>${l.notes?'✓':'—'}</td><td>${l.materials.length||'—'}</td><td>${l.hw.text||l.hw.url?'✓':'—'}</td><td class="small">${fmtDT(hwDue(l.n-1))}</td></tr>`).join('')}</table></div>`;
+ }
+ if(S.atab==='rules'){
+  const fake={enrolled:'cohort',paidThrough:''};
+  const mk=(lvl,days)=>{const sub=lvl==='over'?`Payment is ${days} day(s) overdue.`:`${days} day(s) left until your paid period ends.`;return `<div class="alert ${lvl}"><div class="ai">${lvl==='warn'?'⚠️':'🚨'}</div><div class="at"><b>Qarz munosabatni buzadi! Iltimos to'lovni amalga oshiring.</b><span>${sub}</span></div><button class="btn dark sm">Pay via Telegram</button></div>`};
+  b=`<div class="card"><h3>Current rules</h3><ul class="ticks"><li>Payment warning: from ${CONFIG.warnDays} days before the paid-through date (amber), from ${CONFIG.urgentDays} days (red, pulsing), then overdue. Access locks ${CONFIG.graceDays} days after the date.</li><li>Homework deadline: 19:59 on the day of the next lesson (Tue / Thu / Sat).</li><li>Monthly exam opens during the last ${CONFIG.examWindowDays} days of each month (${CONFIG.examMins} min, exam conditions).</li><li>Minimum scores: ${Object.keys(CONFIG.targets).map(m=>fmonth(m)+' = '+CONFIG.targets[m]).join(', ')}.</li><li>A missed month turns the account red until the student earns ${CONFIG.coinsToRestore} coins (${CONFIG.coinsPerSolve} per solved problem).</li></ul></div>
+  <h3 style="margin:26px 0 8px">Preview: payment warnings</h3>${mk('warn',6)}${mk('urgent',2)}${mk('over',1)}
+  <h3 style="margin:26px 0 8px">Preview: Saturday announcement</h3>${satBanner(true)}
+  <h3 style="margin:26px 0 8px">Preview: red account</h3><div class="alert red"><div class="ai">⛔</div><div class="at"><b>Your account is RED — monthly minimum score not reached</b><span>Earn ${CONFIG.coinsToRestore} coins by solving math &amp; logic problems to restore it.</span></div></div>`;
+ }
+ return `<div class="wrap"><div class="dhead"><div class="eyebrow">Admin</div><h2 class="h2" style="font-size:32px;margin-bottom:4px">Director's control room</h2></div><div class="tabs">${ATABS.map(t=>`<button class="tab ${S.atab===t[0]?'on':''}" data-act="atab" data-t="${t[0]}">${t[1]}</button>`).join('')}</div><div style="padding-bottom:70px">${b}</div></div>`;
+}
+
+/* ---------- draw ---------- */
+function draw(){
+ const y=window.scrollY,u=cur();let v=S.view;
+ if((v==='dash'&&(!u||isAdmin(u)))||(v==='admin'&&!isAdmin(u))){v=u?(isAdmin(u)?'admin':'dash'):'login';S.view=v}
+ $('#nav').innerHTML=navHtml();
+ $('#app').innerHTML=v==='home'?homeHtml():v==='login'?loginHtml():v==='register'?registerHtml():v==='dash'?dashHtml(u):adminHtml();
+ $('#foot').innerHTML=(v==='home'||v==='login'||v==='register')?footHtml():'';
+ if(S.test&&v==='dash')tickTimer();
+ window.scrollTo(0,y);
+}
+
+/* ---------- tests ---------- */
+function tickTimer(){const el=$('#tm');if(!el||!S.test)return;const l=Math.max(0,Math.round((S.test.end-Date.now())/1000));el.textContent=String(Math.floor(l/60)).padStart(2,'0')+':'+String(l%60).padStart(2,'0');if(l<60)el.style.color='var(--bad)'}
+function startRun(o){
+ const idx=o.idx;S.test={name:o.name,tid:o.tid,qs:idx.map(i=>BANK[i]),idx,i:0,ans:{},start:Date.now(),end:Date.now()+o.mins*60000,exam:!!o.exam,cat:o.cat,leaves:0};S.res=null;
+ clearInterval(tmr);tmr=setInterval(()=>{if(!S.test){clearInterval(tmr);return}tickTimer();if(Date.now()>=S.test.end)finishTest(true)},1000);draw();window.scrollTo(0,0);
+}
+function finishTest(auto){
+ const t=S.test;if(!t)return;clearInterval(tmr);const u=cur();
+ const det=t.idx.map((b,i)=>({b,pick:t.ans[i]!=null?t.ans[i]:null,ok:t.ans[i]===BANK[b].a})),c=det.filter(x=>x.ok).length;
+ const rec={id:uid(),tid:t.tid,name:t.name,date:today(),correct:c,total:det.length,score:200+Math.round(c/det.length*60)*10,det};
+ u.prog.tests.push(rec);u.prog.scores.push({date:today(),label:t.name,score:rec.score});
+ addLog(u,(Date.now()-t.start)/60000,t.cat,t.name);
+ if(t.exam)u.prog.exams[ym()]={score:rec.score,date:today(),leaves:t.leaves};
+ save();S.test=null;S.res=rec;if(auto)toast("Time's up — submitted");draw();window.scrollTo(0,0);
+}
+
+/* ---------- payment via Telegram ---------- */
+function openPay(pid){
+ const u=cur();if(!u){S.pend=pid;go('register');return}
+ if(isAdmin(u)){toast('Use a student account to enrol');return}
+ const p=planOf(pid)||PLANS[0],renew=!!u.enrolled;
+ const msg=`Hello! I'd like to ${renew?'renew':'enrol in'} SAT Cohort 1.0 — ${p.name} (${fmt(p.price)}).\nName: ${u.name}\nEmail: ${u.email}\nPhone: ${u.phone}`;
+ modal(`<div class="eyebrow">Payment</div><h2 class="h2" style="font-size:28px">Pay securely via Telegram</h2>
+ <div class="expl" style="border-left:3px solid var(--gold);margin:0 0 16px;color:var(--ink)">🛡 Taking into account the ever-increasing fraud cases in Uzbekistan, it is better to complete the payment one-on-one with the director on Telegram. Please do not send money to anyone else or through unknown links.</div>
+ <div class="item"><div class="grow"><h4>${esc(p.name)}</h4><div class="s">${renew?'Renewal':'New enrolment'}</div></div><b class="serif" style="font-size:20px">${fmt(p.price)}</b></div>
+ <ul class="ticks" style="margin-bottom:18px"><li>Message the director on Telegram (your details are filled in for you).</li><li>Complete the payment with him directly.</li><li>He sends you a personal promo code — your account is unlocked when you enter it below.</li></ul>
+ <a class="btn gold full" href="${tgLink(msg)}" target="_blank" rel="noopener">✈ Pay via Telegram · @${CONFIG.tg}</a>
+ <form data-form="promo" style="margin-top:22px;border-top:1px solid var(--line);padding-top:18px"><label>Already paid? Enter your promo code</label><div style="display:flex;gap:10px"><input name="code" placeholder="XXXX-XXXX" style="text-transform:uppercase" required><button class="btn dark" type="submit">Activate</button></div><div id="perr" class="err" style="margin:8px 0 0"></div></form>`);
+}
+
+/* ---------- actions ---------- */
+const A={
+ go:t=>go(t.dataset.v),
+ scroll:t=>{S.menu=false;const id=t.dataset.t,f=()=>{const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})};if(S.view!=='home'){go('home');setTimeout(f,60)}else{draw();setTimeout(f,30)}},
+ menu:()=>{S.menu=!S.menu;draw()},
+ theme:()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=dark?'light':'dark'},
+ fab:()=>$('#fab').classList.toggle('open'),
+ close:()=>closeModal(),ovclose:(t,e)=>{if(e.target===t)closeModal()},
+ logout:()=>{DB.session=null;save();go('home');toast('Logged out')},
+ enrol:t=>{closeModal();openPay(t.dataset.p)},
+ locked:()=>{const u=cur();if(!u){go('register');toast('Create a free account first')}else openPay('cohort')},
+ sqpick:t=>{const i=S.sq?S.sq.i:0;S.sq={i,pick:+t.dataset.i};draw()},
+ sqnext:()=>{S.sq={i:((S.sq?S.sq.i:0)+1)%BANK.length,pick:null};draw()},
+ tab:t=>{const u=cur();if(S.test&&S.test.exam&&!confirm('Leaving now will submit your exam. Continue?'))return;if(S.test&&S.test.exam)finishTest();clearTimers();S.test=null;S.res=null;S.tab=t.dataset.t;if(t.dataset.open)S.openL=t.dataset.open;draw();window.scrollTo(0,0)},
+ atab:t=>{S.atab=t.dataset.t;draw()},
+ openL:t=>{S.openL=S.openL===t.dataset.id?null:t.dataset.id;draw()},
+ togglelesson:t=>{const u=cur();u.prog.lessons[t.dataset.id]=!u.prog.lessons[t.dataset.id];save();draw()},
+ hwdone:t=>{const u=cur(),id=t.dataset.id;if(u.prog.hw[id])delete u.prog.hw[id];else u.prog.hw[id]=today();save();draw();toast(u.prog.hw[id]?'Homework marked as submitted':'Updated')},
+ openlesson:t=>{const u=cur(),l=LESSONS.find(x=>x.id===t.dataset.id);if(!l)return;const vid=/\.(mp4|webm|ogg)(\?|#|$)/i.test(l.video);
+  modal(`<div class="eyebrow">Lesson ${l.n} · ${esc(l.domain)}</div><h2 class="h2" style="font-size:26px;margin-bottom:16px">${esc(l.title)}</h2>${vid?`<video class="video" controls preload="metadata" src="${esc(l.video)}"></video>`:`<div class="video"><div><div style="font-size:42px">▶</div><p style="margin:8px 0 14px">${l.video?'This lesson is hosted externally.':'The recording is being prepared.'}</p>${l.video?`<a class="btn gold sm" href="${esc(l.video)}" target="_blank" rel="noopener">Open video</a>`:''}</div></div>`}<div style="margin-top:18px"><button class="btn ${u.prog.lessons[l.id]?'line':'gold'}" data-act="modaldone" data-id="${l.id}">${u.prog.lessons[l.id]?'Mark as not completed':'Mark as complete ✓'}</button></div>`,true)},
+ modaldone:t=>{const u=cur();u.prog.lessons[t.dataset.id]=!u.prog.lessons[t.dataset.id];save();closeModal();draw();toast('Updated')},
+ startdiag:()=>startRun({name:'Mini diagnostic',tid:'diag',idx:BANK.map((q,i)=>i),mins:20,cat:'Mock tests'}),
+ starttype:t=>{const ty=TYPES.find(x=>x[0]===t.dataset.id),idx=BANK.map((q,i)=>i).filter(i=>BANK[i].t===ty[0]);startRun({name:ty[1]+' practice',tid:'type:'+ty[0],idx,mins:Math.max(3,Math.ceil(idx.length*1.4)),cat:D.indexOf(ty[2])<2?'Reading':'Grammar & Writing'})},
+ examrules:()=>modal(`<div class="eyebrow">Monthly exam</div><h2 class="h2" style="font-size:26px">Exam conditions</h2><ul class="ticks"><li>You have one attempt this month and ${CONFIG.examMins} minutes. The timer cannot be paused.</li><li>Leaving this page or switching tabs is recorded and shown to the teacher.</li><li>No explanations or hints until you submit.</li><li>Put your phone away, prepare scratch paper and sit somewhere quiet.</li></ul><button class="btn gold full" style="margin-top:18px" data-act="beginexam">I'm ready — begin</button>`),
+ beginexam:()=>{closeModal();startRun({name:'Monthly exam · '+fmonth(ym()),tid:'exam:'+ym(),idx:shuffle(BANK.map((q,i)=>i)),mins:CONFIG.examMins,exam:true,cat:'Mock tests'})},
+ qpick:t=>{S.test.ans[S.test.i]=+t.dataset.i;draw()},
+ qgo:t=>{S.test.i=+t.dataset.i;draw()},qnext:()=>{S.test.i++;draw()},qprev:()=>{S.test.i--;draw()},
+ finish:()=>{const n=S.test.qs.length-Object.keys(S.test.ans).length;if(n&&!confirm(n+' question(s) unanswered. Submit anyway?'))return;finishTest()},
+ viewres:t=>{const u=cur();S.res=u.prog.tests.find(r=>r.id===t.dataset.id);S.tab='mock';draw();window.scrollTo(0,0)},
+ backtests:()=>{S.res=null;draw()},
+ vsub:t=>{clearInterval(mgT);S.vsub=t.dataset.t;S.vq=null;S.mg=null;S.jp=null;draw()},
+ practicelist:t=>{S.vl=t.dataset.i;S.vsub='cards';S.fc=null;draw();window.scrollTo(0,0)},
+ flip:()=>{S.fc.flip=!S.fc.flip;draw()},
+ fcknown:()=>{const u=cur(),f=S.fc,k=f.i%f.deck.length;u.prog.known[f.deck[k]]=1;f.deck.splice(k,1);f.flip=false;save();draw()},
+ fcagain:()=>{S.fc.i++;S.fc.flip=false;draw()},
+ resetknown:()=>{cur().prog.known={};S.fc=null;save();draw()},
+ startquiz:()=>{const P=pool(),n=Math.min(10,P.length),ws=shuffle(P).slice(0,n).map(w=>({w:w[0],def:w[1],o:shuffle([w[1],...shuffle(VOCAB.filter(x=>x[0]!==w[0])).slice(0,3).map(x=>x[1])])}));S.vq={qs:ws,i:0,score:0,pick:null};draw()},
+ vqpick:t=>{const q=S.vq,c=q.qs[q.i];q.pick=+t.dataset.i;if(c.o[q.pick]===c.def)q.score++;draw()},
+ vqnext:()=>{const q=S.vq;q.i++;q.pick=null;if(q.i>=q.qs.length){const u=cur();u.prog.quiz.push({date:today(),score:q.score});addLog(u,5,'Vocabulary','Vocabulary quiz');save()}draw()},
+ startmatch:()=>{clearInterval(mgT);const ws=shuffle(pool()).slice(0,6),tiles=shuffle(ws.flatMap(w=>[{k:w[0],s:w[0],t:'w'},{k:w[0],s:w[1],t:'d'}]));S.mg={tiles,sel:null,done:[],moves:0,t:0,bad:null,started:false};draw()},
+ mtile:t=>{const m=S.mg,i=+t.dataset.i;if(!m.started){m.started=true;mgT=setInterval(()=>{if(!S.mg||S.mg.done.length===6){clearInterval(mgT);return}S.mg.t++;const el=$('#mt');if(el)el.textContent=S.mg.t+'s'},1000)}
+  if(m.sel===null){m.sel=i;m.bad=null;draw();return}
+  if(m.sel===i)return;const a=m.tiles[m.sel],b=m.tiles[i];m.moves++;
+  if(a.k===b.k&&a.t!==b.t){m.done.push(a.k);m.sel=null;m.bad=null;if(m.done.length===6){clearInterval(mgT);const u=cur();if(!u.prog.match||m.t<u.prog.match)u.prog.match=m.t;addLog(u,Math.max(1,m.t/60),'Vocabulary','Match game');save()}draw()}
+  else{m.bad=i;m.sel=null;draw();setTimeout(()=>{if(S.mg===m){m.bad=null;draw()}},550)}},
+ startjp:()=>{const cats=[...Array(NLISTS)].map((_,i)=>({name:'List '+(i+1),words:shuffle(listWords(i)).slice(0,5).map(w=>({w:w[0],def:w[1],o:shuffle([w[0],...shuffle(VOCAB.filter(x=>x[0]!==w[0])).slice(0,3).map(x=>x[0])])}))}));S.jp={cats,used:{},score:0,cur:null};draw()},
+ jpclick:t=>{S.jp.cur={c:+t.dataset.c,r:+t.dataset.r,pick:null};draw()},
+ jppick:t=>{const j=S.jp,c=j.cur,w=j.cats[c.c].words[c.r];c.pick=+t.dataset.i;if(w.o[c.pick]===w.w)j.score+=(c.r+1)*100;j.used[c.c+'-'+c.r]=1;draw()},
+ jpback:()=>{const j=S.jp;j.cur=null;if(Object.keys(j.used).length===20){const u=cur();if(j.score>(u.prog.jp||0))u.prog.jp=j.score;addLog(u,8,'Vocabulary','Jeopardy');save()}draw()},
+ piemode:t=>{S.pie=t.dataset.m;draw()},
+ cppick:t=>{const u=cur(),p=S.cp;p.pick=+t.dataset.i;if(p.pick===p.a){let ok=true;if(p.id){if(u.prog.solved[p.id])ok=false;else u.prog.solved[p.id]=1}if(ok)u.prog.coins+=CONFIG.coinsPerSolve;save()}draw()},
+ cpnext:()=>{S.cp=newProblem(cur());draw()},
+ restore:()=>{const u=cur();if(u.prog.coins<CONFIG.coinsToRestore)return;u.prog.coins-=CONFIG.coinsToRestore;failedMonths(u).forEach(m=>u.prog.cleared[m]=1);save();draw();toast('Account restored — back to green!')},
+ copycode:t=>{const g=S.gen,txt=`Your promo code: ${g.code}\nOpen SAT Cohort 1.0 → Account → "Activate with promo code" and enter it with your registered email (${g.email}). Valid until ${fdate(lastDay(g.ym))}.`;try{navigator.clipboard.writeText(txt).then(()=>toast('Message copied'),()=>toast('Copy failed'))}catch(e){toast('Copy not available')}},
+ delcode:t=>{DB.codes=DB.codes.filter(c=>c.id!==t.dataset.id);save();draw()}
+};
+document.addEventListener('click',e=>{const t=e.target.closest('[data-act]');if(!t)return;const f=A[t.dataset.act];if(f){if(t.tagName==='A'&&!t.getAttribute('href'))e.preventDefault();f(t,e)}});
+document.addEventListener('change',e=>{if(e.target.dataset&&e.target.dataset.sel==='vl'){S.vl=e.target.value;S.fc=null;S.vq=null;S.mg=null;draw()}});
+document.addEventListener('input',e=>{if(e.target.name==='code')e.target.value=e.target.value.toUpperCase()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&S.test&&S.test.exam)S.test.leaves++});
+
+/* ---------- forms ---------- */
+const FORMS={
+ login:f=>{const d=Object.fromEntries(new FormData(f)),em=d.email.trim().toLowerCase();
+  if(em===CONFIG.adminEmail&&hash(d.pass)===CONFIG.adminHash){DB.session='admin';save();toast('Welcome, director');go('admin');return}
+  const u=DB.users.find(x=>x.email===em&&x.pass===hash(d.pass));
+  if(!u){S.err='Incorrect email or password.';draw();return}DB.session=u.id;save();toast('Welcome back, '+u.name.split(' ')[0]);go('dash',{tab:'overview'});if(S.pend){const p=S.pend;S.pend=null;openPay(p)}},
+ register:f=>{const d=Object.fromEntries(new FormData(f)),em=d.email.trim().toLowerCase();
+  if(em===CONFIG.adminEmail||DB.users.some(x=>x.email===em)){S.err='An account with this email already exists.';draw();return}
+  const u={id:uid(),name:d.name.trim(),email:em,phone:d.phone.trim(),pass:hash(d.pass),role:'student',target:+d.target,level:d.level,created:today(),enrolled:null,paidThrough:null,prog:newProg()};
+  DB.users.push(u);DB.session=u.id;save();toast('Account created — welcome!');go('dash',{tab:'overview'});if(S.pend){const p=S.pend;S.pend=null;openPay(p)}},
+ contact:f=>{const d=Object.fromEntries(new FormData(f)),text='Hello! I am '+d.name+'. '+d.msg+' (via SAT Cohort 1.0 website)';
+  const url=d.via==='wa'?'https://wa.me/'+CONFIG.phone+'?text='+encodeURIComponent(text):tgLink(text);window.open(url,'_blank','noopener');toast('Opening '+(d.via==='wa'?'WhatsApp':'Telegram')+'…');f.reset()},
+ profile:f=>{const d=Object.fromEntries(new FormData(f)),u=cur();u.name=d.name.trim();u.phone=d.phone.trim();u.target=+d.target;save();draw();toast('Profile saved')},
+ log:f=>{const d=Object.fromEntries(new FormData(f)),u=cur();addLog(u,+d.min,d.cat,d.note);save();draw();toast('Study session logged')},
+ mockscore:f=>{const d=Object.fromEntries(new FormData(f)),u=cur(),m=MOCKS.find(x=>x.id===f.dataset.id),s=Math.max(200,Math.min(800,Math.round(+d.score/10)*10));
+  u.prog.mocks[m.id]=s;u.prog.scores=u.prog.scores.filter(x=>x.label!==m.name);u.prog.scores.push({date:today(),label:m.name,score:s});save();draw();toast('Score saved')},
+ promo:f=>{const d=Object.fromEntries(new FormData(f)),u=cur(),err=$('#perr');if(!u||isAdmin(u))return;
+  const m=matchCode(u.email,d.code||'');const fail=msg=>{if(err)err.textContent=msg;else toast(msg)};
+  if(!m){fail('This code is not valid for your account email.');return}
+  if(lastDay(m.ym)<today()){fail('This code has expired. Ask the director for a new one.');return}
+  u.enrolled=m.plan;u.paidThrough=lastDay(m.ym);u.startYM=u.startYM||ym();save();closeModal();draw();toast('Activated! Access paid through '+fdate(u.paidThrough))},
+ gencode:f=>{const d=Object.fromEntries(new FormData(f)),email=d.email.trim().toLowerCase(),code=makeCode(email,d.plan,d.ym);
+  S.gen={code,email,plan:d.plan,ym:d.ym};DB.codes.push({id:uid(),date:today(),email,plan:d.plan,ym:d.ym,code});save();draw();toast('Code generated')}
+};
+document.addEventListener('submit',e=>{const f=e.target.closest('form[data-form]');if(!f)return;e.preventDefault();FORMS[f.dataset.form]?.(f)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+/* ---------- init ---------- */
+(function(){const h=(location.hash||'').slice(1),u=cur();if(u&&['dash','admin'].includes(h))S.view=isAdmin(u)?'admin':'dash';else if(['login','register'].includes(h)&&!u)S.view=h;draw()})();
+</script>
+</body>
+</html>
